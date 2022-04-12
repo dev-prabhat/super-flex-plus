@@ -1,0 +1,33 @@
+.website-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5em 1.5em;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 15px 5px var(--primary-theme-shade-20);
+}
+
+.header-title-logo{
+    color: var(--primary-theme-color);
+}
+
+.header-description{
+    color: var(--primary-theme-light-color);
+}
+
+.search-input{
+    width: 30%;
+    margin: 0 10%;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.side-navbar{
+    width: 15%;
+    margin-right:5px;
+}
+
+.icon-margin{
+    margin: 0 15px;
+}
