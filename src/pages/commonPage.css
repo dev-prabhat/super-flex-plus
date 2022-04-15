@@ -46,3 +46,7 @@
 .video-listed{
     grid-area: video-listed;
 }
+
+.active-style{
+    background-color: var(--primary-theme-shade-20);
+}

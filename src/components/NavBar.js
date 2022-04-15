@@ -4,23 +4,24 @@ import { AiOutlineHome, AiFillHeart,AiOutlineHistory } from "react-icons/ai";
 import { MdOutlinePlaylistPlay } from "react-icons/md";
 import { BsFillBookmarkFill } from "react-icons/bs";
 
+const activeStyle = ({isActive}) => { return isActive ? "btn-link d-flex head-sm margin-xs active-style" : "btn-link d-flex head-sm margin-xs"}
 export const NavBar = () => {
     return(
         <>
          <aside className="side-navbar">
-            <NavLink to="/" className="btn-link d-flex head-sm margin-xs"> 
+            <NavLink to="/" className={activeStyle}> 
                <AiOutlineHome className="head-md icon-margin"/> Home
             </NavLink>
-            <NavLink to="/playlist" className="btn-link d-flex head-sm margin-xs">
+            <NavLink to="/playlist" className={activeStyle}>
                 <MdOutlinePlaylistPlay className="head-md icon-margin"/> Playlist
             </NavLink>
-            <NavLink to="/like" className="btn-link d-flex head-sm margin-xs">
+            <NavLink to="/like" className={activeStyle}>
                 <AiFillHeart className="head-md icon-margin"/>Liked
             </NavLink>
-            <NavLink to="/watchlater" className="btn-link d-flex head-sm margin-xs">
+            <NavLink to="/watchlater" className={activeStyle}>
                 <BsFillBookmarkFill className="head-md icon-margin"/>Watch Later
             </NavLink>
-            <NavLink to="/history" className="btn-link d-flex head-sm margin-xs">
+            <NavLink to="/history" className={activeStyle}>
                 <AiOutlineHistory className="head-md icon-margin"/>History
             </NavLink>
          </aside>
