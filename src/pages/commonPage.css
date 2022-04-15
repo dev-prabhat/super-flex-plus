@@ -1,3 +1,10 @@
+.page-main{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "side-navbar video-listed video-listed video-listed";
+}
+
 .website-header{
     display: flex;
     justify-content: space-between;
@@ -6,6 +13,8 @@
     padding: 0.5em 1.5em;
     margin-bottom: 1em;
     box-shadow: 0px 0px 15px 5px var(--primary-theme-shade-20);
+
+    grid-area: header;
 }
 
 .header-title-logo{
@@ -24,10 +33,16 @@
 }
 
 .side-navbar{
-    width: 15%;
+    width: 75%;
     margin-right:5px;
+
+    grid-area: side-navbar;
 }
 
 .icon-margin{
     margin: 0 15px;
+}
+
+.video-listed{
+    grid-area: video-listed;
 }

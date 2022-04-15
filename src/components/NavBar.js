@@ -14,7 +14,7 @@ export const NavBar = () => {
             <NavLink to="/playlist" className="btn-link d-flex head-sm margin-xs">
                 <MdOutlinePlaylistPlay className="head-md icon-margin"/> Playlist
             </NavLink>
-            <NavLink to="/liked" className="btn-link d-flex head-sm margin-xs">
+            <NavLink to="/like" className="btn-link d-flex head-sm margin-xs">
                 <AiFillHeart className="head-md icon-margin"/>Liked
             </NavLink>
             <NavLink to="/watchlater" className="btn-link d-flex head-sm margin-xs">
