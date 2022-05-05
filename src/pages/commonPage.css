@@ -1,8 +1,8 @@
 .page-main{
     display: grid;
     grid-template-areas: 
-    "header header header header"
-    "side-navbar video-listed video-listed video-listed";
+    "header header header header header header header header header header header header"
+    "side-navbar side-navbar side-navbar page-content page-content page-content page-content page-content page-content page-content page-content page-content";
 }
 
 .website-header{
@@ -11,9 +11,7 @@
     align-items: center;
 
     padding: 0.5em 1.5em;
-    margin-bottom: 1em;
-    box-shadow: 0px 0px 15px 5px var(--primary-theme-shade-20);
-
+    background-color: var(--secondary-theme-color);
     grid-area: header;
 }
 
@@ -33,9 +31,9 @@
 }
 
 .side-navbar{
-    width: 75%;
+    width: 20vw;
     margin-right:5px;
-
+    background-color: var(--secondary-theme-color);
     grid-area: side-navbar;
 }
 
@@ -43,8 +41,8 @@
     margin: 0 15px;
 }
 
-.video-listed{
-    grid-area: video-listed;
+.page-content{
+    grid-area: page-content;
 }
 
 .active-style{
