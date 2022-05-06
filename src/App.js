@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AuthRoute, PrivateRoute } from "./components";
-import { Home ,LikePage,WatchLater,PlayList,Mock, Explore, Login} from "./pages";
+import { Home ,LikePage,WatchLater,PlayList,Mock, Explore, Login} from "./pages/index";
 
 import "./styles.css"
 

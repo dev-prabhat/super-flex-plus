@@ -16,7 +16,7 @@ export const Header = () => {
                 encodedToken ? (
                     <button onClick={handleLogout} className="btn btn-primary head-sm">Logout</button>
                 ) : (
-                    <Link to="login" className="btn btn-primary btn-link head-sm">Login</Link>
+                    <Link to="/login" className="btn btn-primary btn-link head-sm">Login</Link>
                 ) 
              }
          </header>
