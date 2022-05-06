@@ -1,5 +1,5 @@
 import {Navigate,useLocation,Outlet} from "react-router-dom"
-import { useAuth } from "../context/Auth-Context" 
+import { useAuth } from "../context" 
 
 export const PrivateRoute = () => {
    const {encodedToken} = useAuth()
