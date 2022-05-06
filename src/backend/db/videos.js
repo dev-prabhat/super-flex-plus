@@ -6,14 +6,14 @@
 export const videos = [
   {
    _id:"GqiazL5L9dU",
-   title:"Doctor Strange In The Multiverse Of Madness Official Trailer Breakdown in Hindi",
+   title:"Doctor Strange In The Multiverse Of Madness Trailer Breakdown",
    creator:"Desi Nerd",
    thumbnail:"https://i.ytimg.com/vi/GqiazL5L9dU/hq720.jpg",
    category:"Tralier Breakdown"
   },
   {
     _id:"ARlSRexeOMc",
-    title:"Moon Knight Official Trailer Breakdown in Hindi",
+    title:"Moon Knight Official Trailer Breakdown ",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/ARlSRexeOMc/hq720.jpg",
     category:"Tralier Breakdown"
@@ -27,21 +27,21 @@ export const videos = [
   },
   {
     _id:"cERv6QoDBWk",
-    title:"The Batman Main Trailer Breakdown in Hindi",
+    title:"The Batman Main Trailer Breakdown ",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/cERv6QoDBWk/hq720.jpg",
     category:"Tralier Breakdown"
   },
   {
     _id:"OBVHis1hIdY",
-    title:"Who is Black Adam | DC Character | Explained in Hindi",
+    title:"Who is Black Adam | DC Character ",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/OBVHis1hIdY/hq720.jpg",
     category:'Origin Story'
   },
   {
     _id:"D3VLFqk2lxA",
-    title:"Who is Gorr The God Butcher? | SuperSuper",
+    title:"Who is Gorr The God Butcher?",
     creator:"Super Super",
     thumbnail:"https://i.ytimg.com/vi/D3VLFqk2lxA/hq720.jpg",
     category:"Origin Stroy"
@@ -118,14 +118,14 @@ export const videos = [
   },
   {
     _id:"wLT8ThlLiHQ",
-    title:"Zack Snyder's Justice League reivew",
+    title:"Zack Snyder's Justice League review",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/wLT8ThlLiHQ/hq720.jpg",
     category:"Movie Reivew"
   },
   {
     _id:"38tlLq9rjnI",
-    title:"Avengers: Infinity War reivew in Hindi",
+    title:"Avengers: Infinity War reivew ",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/38tlLq9rjnI/hq720.jpg",
     category:"Movie Review"
@@ -139,28 +139,28 @@ export const videos = [
   },
   {
     _id:"jW9GOOkdNFo",
-    title:"Shang-Chi and The Legend of the Ten Rings Movie Review",
+    title:"Shang-Chi and The Legend of the Ten Rings",
     creator:"Super Super",
     thumbnail:"https://i.ytimg.com/vi/jW9GOOkdNFo/hq720.jpg",
     category:"Movie Review"
   },
   {
     _id:"-9uYX-8DMV0",
-    title:"Shang-Chi Official Trailer Breakdown in Hindi",
+    title:"Shang-Chi Official Trailer Breakdown ",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/-9uYX-8DMV0/hq720.jpg",
     category:"Trailer Breakdown"
   },
   {
     _id:"irGkeoNDkN8",
-    title:"Wonder Woman 1984 Official Trailer Breakdown in Hindi",
+    title:"Wonder Woman 1984 Official Trailer Breakdown",
     creator:"Super Super",
     thumbnail:"https://i.ytimg.com/vi/irGkeoNDkN8/hq720.jpg",
     category:'Trailer Breakdown'
   },
   {
     _id:"NoT3H8x6Jpk",
-    title:'Wonder Woman 1984 Review in Hindi',
+    title:'Wonder Woman 1984 Review ',
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/NoT3H8x6Jpk/hq720.jpg",
     category:'Movie Review'

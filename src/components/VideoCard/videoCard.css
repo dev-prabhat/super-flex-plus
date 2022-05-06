@@ -1,0 +1,11 @@
+.video-card{
+    width: 30%;
+    border: 2px solid var(--primary-theme-color);
+    border-radius: 5px;
+    background-color: var(--secondary-theme-color);
+    cursor: pointer;
+}
+
+.video-title,.video-creator{
+    color: var(--primary-theme-color);
+}
