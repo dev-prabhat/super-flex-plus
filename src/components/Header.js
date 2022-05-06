@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom"
+import { useAuth } from "../context/Auth-Context"
+
 export const Header = () => {
+    const {encodedToken,handleLogout} = useAuth()
+
     return(
         <>
          <header className="website-header">
@@ -7,7 +12,13 @@ export const Header = () => {
               <p className="text-sm font-weight-semibold header-description">Video Space for SuperHero Nerds</p>
              </div>
              <input className="padding-xs search-input" placeholder="Search your video"/>
-             <button className="btn btn-primary head-sm">Login</button>
+             {
+                encodedToken ? (
+                    <button onClick={handleLogout} className="btn btn-primary head-sm">Logout</button>
+                ) : (
+                    <Link to="login" className="btn btn-primary btn-link head-sm">Login</Link>
+                ) 
+             }
          </header>
         </>
     )
