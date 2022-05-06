@@ -1,5 +1,5 @@
 import React from "react"
-import { useVideo } from "../../context/Video-Context"
+import { useVideo } from "../../context"
 import { Header, NavBar, VideoCard } from "../../components"
 import "../commonPage.css"
 import "./explore.css"

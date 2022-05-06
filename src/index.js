@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { AuthProvider } from "./context/Auth-Context";
-import { VideoProvider } from "./context/Video-Context";
+import { AuthProvider,VideoProvider } from "./context";
 import { makeServer } from "./server";
 
 // Call make Server

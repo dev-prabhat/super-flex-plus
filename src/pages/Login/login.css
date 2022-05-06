@@ -1,6 +1,6 @@
 .login-form{
     width: 35%;
-    margin: 5vh auto;
+    margin: 15vh auto;
     background-color: var(--secondary-theme-color);
 }
 
@@ -15,8 +15,9 @@
 }
 
 .show-hide-icon{
+    font-size: 1.5rem;
     position: absolute;
-    bottom: 15px;
+    bottom: 12px;
     right: 5px;
     cursor: pointer;
 }

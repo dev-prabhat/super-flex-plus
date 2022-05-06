@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useAuth } from "../context/Auth-Context"
+import { useAuth } from "../context"
 
 export const Header = () => {
     const {encodedToken,handleLogout} = useAuth()

@@ -1,5 +1,7 @@
 import React,{useState} from "react"
-import { useAuth } from "../../context/Auth-Context"
+import { BiShow,BiHide } from "react-icons/bi";
+import {useAuth} from "../../context"
+
 import "./login.css"
 
 export const Login = () => {
@@ -30,7 +32,13 @@ export const Login = () => {
                     value={loginData.password}
                     required
                     />
-                    <p className="show-hide-icon" onClick={() => setShowPassword(prev => !prev)}>{showPassword ? "Hide" : "Show"}</p>
+                    {
+                       showPassword ? (
+                           <BiShow className="show-hide-icon" onClick={() => setShowPassword(prev => !prev)}/>
+                       ) : (
+                           <BiHide className="show-hide-icon" onClick={() => setShowPassword(prev => !prev)}/>
+                       )   
+                    }
             </div>
             <div className="other-option-container margin-xs ">
                 <div>
