@@ -11,7 +11,7 @@ export const Explore = () => {
           <main className="page-main">
               <Header/>
               <NavBar/>
-                <section className="page-content padding-xs">
+                <section className="page-content">
                     <div className="videos-container">
                         {
                             videos.map(video => (
