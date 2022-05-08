@@ -4,7 +4,7 @@ import { AiOutlineHome, AiFillHeart,AiOutlineHistory } from "react-icons/ai";
 import { MdOutlinePlaylistPlay,MdOutlineExplore } from "react-icons/md";
 import { BsFillBookmarkFill } from "react-icons/bs";
 
-const activeStyle = ({isActive}) => { return isActive ? "btn-link d-flex head-sm margin-xs active-style" : "btn-link d-flex head-sm margin-xs"}
+const activeStyle = ({isActive}) => { return isActive ? "btn-link d-flex head-sm margin-xs active-style" : "btn-link d-flex head-sm margin-xs" }
 export const NavBar = () => {
     return(
         <>
@@ -23,9 +23,6 @@ export const NavBar = () => {
             </NavLink>
             <NavLink to="/watchlater" className={activeStyle}>
                 <BsFillBookmarkFill className="head-md icon-margin"/>Watch Later
-            </NavLink>
-            <NavLink to="/history" className={activeStyle}>
-                <AiOutlineHistory className="head-md icon-margin"/>History
             </NavLink>
          </aside>
         </>

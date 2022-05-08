@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { Home ,LikePage,WatchLater,PlayList,Mock, Explore} from "./pages/Index";
+import { AuthRoute, PrivateRoute } from "./components";
+import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock} from "./pages";
 
 import "./styles.css"
 
@@ -9,9 +10,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/explore" element={<Explore/>}/>
-        <Route path="/like" element={<LikePage/>}/>
-        <Route path="/watchlater" element={<WatchLater/>}/>
-        <Route path="/playlist" element={<PlayList/>}/>
+
+        <Route element={<PrivateRoute/>}>
+          <Route path="/like" element={<LikePage/>}/>
+          <Route path="/watchlater" element={<WatchLater/>}/>
+          <Route path="/playlist" element={<PlayList/>}/>
+        </Route>
+
+        <Route element={<AuthRoute/>}>
+           <Route path="/login" element={<Login/>}/>
+        </Route>
+      
         <Route path="/mock" element={<Mock/>}/>
       </Routes>
     </>

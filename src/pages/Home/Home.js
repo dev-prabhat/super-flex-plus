@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import { useVideo } from "../../context/Video-Context"
+import { useVideo } from "../../context"
 import { Header, NavBar , Category} from "../../components"
 import "../commonPage.css"
 import "./home.css"

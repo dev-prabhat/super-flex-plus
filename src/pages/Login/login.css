@@ -1,0 +1,28 @@
+.login-form{
+    width: 35%;
+    margin: 15vh auto;
+    background-color: var(--secondary-theme-color);
+}
+
+.highlight{
+    color: var(--primary-theme-color);
+}
+
+.other-option-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show-hide-icon{
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.test-credential{
+    color: var(--primary-theme-color);
+    cursor: pointer;
+}

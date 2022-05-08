@@ -1,0 +1,36 @@
+.video-card{
+    width: 31%;
+    border-radius: 5px;
+    background-color: var(--secondary-theme-color);
+}
+
+.video-card:hover{
+    box-shadow: 0 0 5px 0 var(--primary-theme-color);
+}
+
+.img{
+    height: 30vh;
+    cursor: pointer;
+}
+
+.video-info-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0;
+}
+
+.avatar-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-title,.video-creator{
+    color: var(--primary-theme-color);
+}
+
+.kebab-icon{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    cursor: pointer;
+}
