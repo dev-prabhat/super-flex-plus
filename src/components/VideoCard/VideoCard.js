@@ -1,28 +1,41 @@
 import React from "react"
-import { GoKebabVertical } from "react-icons/go";
+import { Link } from "react-router-dom";
+import { useModal , useLikeWatchLater} from "../../context";
+import { MdWatchLater, MdPlaylistAdd} from "react-icons/md";
+import { AiFillHeart } from "react-icons/ai";
+
 import "./videoCard.css"
 
-export const VideoCard = ({video}) => {
-    const {thumbnail,creator,title,avatar} = video
+
+export const VideoCard = ({video, isExplore = false , isLike = false , isWatchLater = false , isHistory = false} ) => {
+    const {thumbnail,title,_id} = video
+    const {removeFromWatchLater,handleDislike} = useLikeWatchLater()
+    const {setIsModal} = useModal()
     return(
         <>
           <div className="video-card margin-xs padding-xs">
-              <div className="img img-container">
-                <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
-              </div>
-              <div className="video-info-container">
-                  <div className="avatar-title-container">
-                    <div class="avatar avatar-xs">
-                      <img
-                        class="img-responsive img-round"
-                        src={avatar}
-                        alt="avatar"
-                      />
-                    </div>
-                    <p className="video-creator text-center font-weight-semibold">{creator}</p>
+            {
+              isExplore ? 
+                <Link to={`${_id}`} state={video}>
+                  <div className="img img-container">
+                    <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
                   </div>
-                  <h4 className="video-title text-center text-sm">{title}</h4>
-                  <GoKebabVertical className="kebab-icon"/>
+                </Link> :
+                  <div className="img img-container">
+                    <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
+                  </div>
+            }
+              <div className="video-info-container">
+                  <h4 className="video-title text-sm">{title}</h4>
+                  {
+                    isExplore && <MdPlaylistAdd  onClick={()=>setIsModal(prev => !prev)} className="playlist-icon"/>
+                  }
+                  {
+                    isWatchLater && <MdWatchLater onClick={()=>removeFromWatchLater(video._id)} className="watchlater-icon"/>
+                  }
+                  {
+                    isLike &&  <AiFillHeart  onClick={()=>handleDislike(video._id)} className="like-icon" />  
+                  }
               </div>
           </div>
         </>
