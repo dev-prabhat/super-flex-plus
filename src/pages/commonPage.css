@@ -2,7 +2,8 @@
     display: grid;
     grid-template-areas: 
     "header header header header header header header header header header header header"
-    "side-navbar side-navbar side-navbar page-content page-content page-content page-content page-content page-content page-content page-content page-content";
+    "side-navbar page-content page-content page-content page-content page-content page-content page-content page-content page-content page-content page-content";
+    position: relative;
 }
 
 .website-header{
@@ -10,6 +11,8 @@
     justify-content: space-between;
     align-items: center;
 
+    position: fixed;
+    width: 100%;
     padding: 0.5em 1.5em;
     background-color: var(--secondary-theme-color);
     grid-area: header;
@@ -33,6 +36,9 @@
 .side-navbar{
     width: 20vw;
     margin-right:5px;
+    position: fixed;
+    margin-top: 12vh;
+    height: 87vh;
     background-color: var(--secondary-theme-color);
     grid-area: side-navbar;
 }
@@ -42,7 +48,9 @@
 }
 
 .page-content{
+    width: 80vw;
     grid-area: page-content;
+    margin: 12vh 0 0 20%;
 }
 
 .active-style{
