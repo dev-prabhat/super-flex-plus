@@ -48,9 +48,9 @@
 }
 
 .page-content{
-    width: 80vw;
+    width: 77vw;
     grid-area: page-content;
-    margin: 12vh 0 0 20%;
+    margin: 12vh 0 0 21vw;
 }
 
 .active-style{

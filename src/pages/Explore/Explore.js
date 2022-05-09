@@ -11,7 +11,9 @@ export const Explore = () => {
           <main className="page-main">
               <Header/>
               <NavBar/>
-              <Modal/>
+              <Modal>
+                  <h1 className="head-md">This is Just test</h1>
+              </Modal>
                 <section className="page-content padding-xs">
                     <div className="videos-container">
                         {

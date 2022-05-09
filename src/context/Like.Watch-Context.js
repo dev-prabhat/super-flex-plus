@@ -1,10 +1,12 @@
 import React,{createContext,useState,useContext,useEffect} from "react"
+import { useNavigate } from "react-router-dom"
 import { useAxios } from "../customHooks/useAxios"
 import { useAuth } from "./Auth-Context"
 
 const LikeWatchLaterContext = createContext()
 
 const LikeWatchLaterProvider = ({children}) => {
+   const navigate = useNavigate()
    const {encodedToken} = useAuth() 
    const {response:likeResponse,operation:likeOperation} = useAxios()
    const {response:watchLaterResponse,operation:watchLaterOperation} = useAxios()
@@ -12,6 +14,7 @@ const LikeWatchLaterProvider = ({children}) => {
    const [watchLaterList, setWatchLaterList] = useState([])
 
    const handleLike = (video) => {
+       if(encodedToken === null) navigate( "/login", {replace:true})
        likeOperation({
            method:"post",
            url:"/api/user/likes",
@@ -29,6 +32,7 @@ const LikeWatchLaterProvider = ({children}) => {
    }
 
    const addToWatchLater = (video) => {
+    if(encodedToken === null) navigate( "/login", {replace:true})
        watchLaterOperation({
            method:"post",
            url:"/api/user/watchlater",

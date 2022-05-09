@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AuthRoute, PrivateRoute } from "./components";
-import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer} from "./pages";
+import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History} from "./pages";
 
 import "./styles.css"
 
@@ -16,6 +16,7 @@ function App() {
           <Route path="/like" element={<LikePage/>}/>
           <Route path="/watchlater" element={<WatchLater/>}/>
           <Route path="/playlist" element={<PlayList/>}/>
+          <Route path="/history" element={<History/>}/>
         </Route>
 
         <Route element={<AuthRoute/>}>

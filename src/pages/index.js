@@ -6,5 +6,6 @@ import { Mock } from "./Mock/Mock"
 import { Explore } from "./Explore/Explore"
 import {Login} from "./Login/Login"
 import { SinglePlayer } from "./SinglePlayer/SinglePlayer"
+import { History } from "./History/History"
 
-export {Home,LikePage,PlayList,WatchLater,Mock,Explore,Login,SinglePlayer}  
+export {Home,LikePage,PlayList,WatchLater,Mock,Explore,Login,SinglePlayer,History}  
