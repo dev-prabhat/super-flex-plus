@@ -4,5 +4,6 @@ import { Category } from "./Category"
 import { VideoCard } from "./VideoCard/VideoCard" 
 import { PrivateRoute } from "./PrivateRoute"
 import { AuthRoute } from "./AuthRoute" 
+import { Modal } from "./Modal/Modal"
 
-export {Header,NavBar,Category,VideoCard,PrivateRoute,AuthRoute} 
+export {Header,NavBar,Category,VideoCard,PrivateRoute,AuthRoute,Modal} 

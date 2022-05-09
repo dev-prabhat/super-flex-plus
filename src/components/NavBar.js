@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom"
 
-import { AiOutlineHome, AiFillHeart,AiOutlineHistory } from "react-icons/ai";
-import { MdOutlinePlaylistPlay,MdOutlineExplore } from "react-icons/md";
-import { BsFillBookmarkFill } from "react-icons/bs";
+import { AiOutlineHome, AiOutlineHeart } from "react-icons/ai";
+import { MdOutlinePlaylistPlay,MdOutlineExplore,MdOutlineWatchLater } from "react-icons/md";
+
 
 const activeStyle = ({isActive}) => { return isActive ? "btn-link d-flex head-sm margin-xs active-style" : "btn-link d-flex head-sm margin-xs" }
 export const NavBar = () => {
@@ -19,10 +19,10 @@ export const NavBar = () => {
                 <MdOutlinePlaylistPlay className="head-md icon-margin"/> Playlist
             </NavLink>
             <NavLink to="/like" className={activeStyle}>
-                <AiFillHeart className="head-md icon-margin"/>Liked
+                <AiOutlineHeart className="head-md icon-margin"/>Liked
             </NavLink>
             <NavLink to="/watchlater" className={activeStyle}>
-                <BsFillBookmarkFill className="head-md icon-margin"/>Watch Later
+                <MdOutlineWatchLater className="head-md icon-margin"/>Watch Later
             </NavLink>
          </aside>
         </>
