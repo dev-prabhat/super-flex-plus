@@ -1,0 +1,27 @@
+.modal-wrapper{
+    background-color: var(--modal-bg-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+}
+
+.modal-content{
+    width: 20%;
+    cursor: auto;
+    position: relative;
+    background-color: var(--secondary-theme-color);
+}
+
+.close-btn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

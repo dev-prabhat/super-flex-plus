@@ -1,5 +1,6 @@
 .video-card{
     width: 31%;
+    height: 45vh;
     border-radius: 5px;
     background-color: var(--secondary-theme-color);
 }
@@ -10,7 +11,6 @@
 
 .img{
     height: 30vh;
-    cursor: pointer;
 }
 
 .video-info-container{
@@ -19,18 +19,11 @@
     padding: 1rem 0 0;
 }
 
-.avatar-title-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video-title,.video-creator{
+.video-title{
     color: var(--primary-theme-color);
 }
 
-.kebab-icon{
+.playlist-icon{
     font-size: 1.5rem;
-    margin-left: 10px;
     cursor: pointer;
 }

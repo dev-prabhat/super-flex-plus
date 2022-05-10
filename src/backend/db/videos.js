@@ -6,7 +6,7 @@
 export const videos = [
   {
    _id:"GqiazL5L9dU",
-   title:"Doctor Strange : Multiverse Of Madness Trailer Breakdown",
+   title:"Doctor Strange 2 Trailer Breakdown",
    creator:"Desi Nerd",
    thumbnail:"https://i.ytimg.com/vi/GqiazL5L9dU/hq720.jpg",
    avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
@@ -70,7 +70,7 @@ export const videos = [
   },
   {
     _id:"C4Z6U58i3fE",
-    title:"Thor: Love and Thunder Teaser BreakDown",
+    title:"Thor: Love & Thunder Teaser BreakDown",
     creator:'Super Super',
     thumbnail:"https://i.ytimg.com/vi/C4Z6U58i3fE/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLTjXrQG1HAMq9uDm4NP1ruQIjuz8mZxtYy8ZQGg_Q",
@@ -158,7 +158,7 @@ export const videos = [
   },
   {
     _id:"irGkeoNDkN8",
-    title:"Wonder Woman 1984 Official Trailer Breakdown",
+    title:"Wonder Woman 1984 Trailer Breakdown",
     creator:"Super Super",
     thumbnail:"https://i.ytimg.com/vi/irGkeoNDkN8/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLTjXrQG1HAMq9uDm4NP1ruQIjuz8mZxtYy8ZQGg_Q",
