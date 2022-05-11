@@ -1,0 +1,27 @@
+.single-playlist-container{
+    border: 1px solid var(--dark-theme-color);
+}
+
+.playlist-info{
+    width: fit-content;
+    margin: 5px auto;
+}
+
+.delete-playlist{
+    width: fit-content;
+    margin: 5px auto;
+}
+
+.single-playlist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.playlist-link{
+    text-decoration: none;
+    color: var(--dark-theme-color);
+}
+
