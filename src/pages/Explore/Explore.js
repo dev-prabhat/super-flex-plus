@@ -1,6 +1,6 @@
 import React from "react"
 import { useVideo } from "../../context"
-import { Header, Modal, NavBar, VideoCard } from "../../components"
+import { Header, Modal, NavBar, PlaylistForm, VideoCard } from "../../components"
 import "../commonPage.css"
 import "./explore.css"
 
@@ -12,7 +12,7 @@ export const Explore = () => {
               <Header/>
               <NavBar/>
               <Modal>
-                  <h1 className="head-md">This is Just test</h1>
+                 <PlaylistForm/>
               </Modal>
                 <section className="page-content padding-xs">
                     <div className="videos-container">
