@@ -18,7 +18,7 @@ export {
         HistoryProvider,
         useHistory,
         FilterProvider, 
-        useFilter
+        useFilter,
         PlaylistProvider,
         usePlaylist
     }
