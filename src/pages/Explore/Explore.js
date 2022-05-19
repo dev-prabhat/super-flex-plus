@@ -1,6 +1,6 @@
 import React from "react"
 import { useVideo , useFilter} from "../../context"
-import { Header, Modal, NavBar, VideoCard , CategoryChip} from "../../components"
+import { Header, Modal, NavBar, VideoCard, PlaylistForm , CategoryChip} from "../../components"
 import "../commonPage.css"
 import "./explore.css"
 
@@ -13,7 +13,7 @@ export const Explore = () => {
               <Header/>
               <NavBar/>
               <Modal>
-                  <h1 className="head-md">This is Just test</h1>
+                 <PlaylistForm/>
               </Modal>
                 <section className="page-content padding-xs">
                     <div className="categorychip-container">

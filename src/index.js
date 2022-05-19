@@ -2,7 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { AuthProvider,FilterProvider,HistoryProvider,LikeWatchLaterProvider,ModalProvider,VideoProvider } from "./context";
+import { AuthProvider,
+        FilterProvider,
+        HistoryProvider,
+        LikeWatchLaterProvider,
+        PlaylistProvider,
+        ModalProvider,
+        VideoProvider 
+} from "./context";
+
 import { makeServer } from "./server";
 
 // Call make Server
@@ -15,15 +23,17 @@ ReactDOM.render(
       <AuthProvider>
         <VideoProvider>
           <LikeWatchLaterProvider>
-            <HistoryProvider>
+            <PlaylistProvider>
+             <HistoryProvider>
               <FilterProvider>
                 <App />
               </FilterProvider>
             </HistoryProvider>
+           <PlaylistProvider>
           </LikeWatchLaterProvider>
         </VideoProvider>
       </AuthProvider>
-    </ModalProvider>
+     </ModalProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

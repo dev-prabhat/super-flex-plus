@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import { useModal , useLikeWatchLater , useHistory} from "../../context";
+import { useModal , useLikeWatchLater , useHistory,usePlaylist} from "../../context";
 import { MdWatchLater, MdPlaylistAdd} from "react-icons/md";
 import { FiTrash2 } from "react-icons/fi";
 import { AiFillHeart } from "react-icons/ai";
@@ -8,11 +8,25 @@ import { AiFillHeart } from "react-icons/ai";
 import "./videoCard.css"
 
 
-export const VideoCard = ({video, isExplore = false , isLike = false , isWatchLater = false , isHistory = false} ) => {
+export const VideoCard = ({
+  video, 
+  isExplore = false , 
+  isLike = false , 
+  isWatchLater = false , 
+  isHistory = false , 
+  playlistId = "",
+  isPlaylist = false }) => {
     const {thumbnail,title,_id} = video
     const {removeFromWatchLater,handleDislike} = useLikeWatchLater()
     const {removeFromHistory,addToHistory} = useHistory()
+    const {setPlaylistVideo,deleteFromPlaylist} = usePlaylist()
     const {setIsModal} = useModal()
+    
+    const clickHandler = (video) => {
+      setIsModal(prev => !prev)
+      setPlaylistVideo(video)
+    }
+
     return(
         <>
           <div className="video-card margin-xs padding-xs">
@@ -30,7 +44,7 @@ export const VideoCard = ({video, isExplore = false , isLike = false , isWatchLa
               <div className="video-info-container">
                   <h4 className="video-title text-sm">{title}</h4>
                   {
-                    isExplore && <MdPlaylistAdd  onClick={()=>setIsModal(prev => !prev)} className="playlist-icon"/>
+                    isExplore && <MdPlaylistAdd  onClick={()=>clickHandler(video)} className="playlist-icon"/>
                   }
                   {
                     isWatchLater && <MdWatchLater onClick={()=>removeFromWatchLater(video._id)} className="watchlater-icon"/>
@@ -40,6 +54,9 @@ export const VideoCard = ({video, isExplore = false , isLike = false , isWatchLa
                   }
                   {
                     isHistory && <FiTrash2 onClick={()=>removeFromHistory(video._id)} className="trash-icon"/>
+                  }
+                  {
+                    isPlaylist && <FiTrash2 onClick={()=>deleteFromPlaylist(playlistId,video._id)} className="trash-icon"/>
                   }
               </div>
           </div>

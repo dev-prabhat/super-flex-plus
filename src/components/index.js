@@ -5,6 +5,8 @@ import { VideoCard } from "./VideoCard/VideoCard"
 import { PrivateRoute } from "./PrivateRoute"
 import { AuthRoute } from "./AuthRoute" 
 import { Modal } from "./Modal/Modal"
+import {PlaylistForm} from "./PlaylistForm"
 import { CategoryChip } from "./CategoryChip/CategoryChip"
 
-export {Header,NavBar,Category,VideoCard,PrivateRoute,AuthRoute,Modal,CategoryChip} 
+export {Header,NavBar,Category,VideoCard,PrivateRoute,AuthRoute,Modal,CategoryChip,PlaylistForm} 
+

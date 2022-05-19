@@ -4,6 +4,7 @@ import { ModalProvider, useModal } from "./Modal-Context"
 import { LikeWatchLaterProvider,useLikeWatchLater } from "./Like.Watch-Context"
 import { HistoryProvider,useHistory } from "./History-Context"
 import { FilterProvider, useFilter } from "./Filter-Context"  
+import { PlaylistProvider,usePlaylist } from "./Playlist-Context"
 
 export {
         VideoProvider,
@@ -18,4 +19,6 @@ export {
         useHistory,
         FilterProvider, 
         useFilter
+        PlaylistProvider,
+        usePlaylist
     }
