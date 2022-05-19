@@ -10,7 +10,7 @@ export const videos = [
    creator:"Desi Nerd",
    thumbnail:"https://i.ytimg.com/vi/GqiazL5L9dU/hq720.jpg",
    avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
-   category:"Tralier Breakdown"
+   category:"Trailer Breakdown"
   },
   {
     _id:"ARlSRexeOMc",
@@ -18,7 +18,7 @@ export const videos = [
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/ARlSRexeOMc/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
-    category:"Tralier Breakdown"
+    category:"Trailer Breakdown"
   },
   {
     _id:"Ua0viur7s3k",
@@ -34,7 +34,7 @@ export const videos = [
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/cERv6QoDBWk/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
-    category:"Tralier Breakdown"
+    category:"Trailer Breakdown"
   },
   {
     _id:"OBVHis1hIdY",
@@ -50,7 +50,7 @@ export const videos = [
     creator:"Super Super",
     thumbnail:"https://i.ytimg.com/vi/D3VLFqk2lxA/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLTjXrQG1HAMq9uDm4NP1ruQIjuz8mZxtYy8ZQGg_Q",
-    category:"Origin Stroy"
+    category:"Origin Story"
   },
   {
     _id:'9BnZIvi7z7Y',
@@ -74,7 +74,7 @@ export const videos = [
     creator:'Super Super',
     thumbnail:"https://i.ytimg.com/vi/C4Z6U58i3fE/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLTjXrQG1HAMq9uDm4NP1ruQIjuz8mZxtYy8ZQGg_Q",
-    category:"Tralier Breakdown"
+    category:"Trailer Breakdown"
   },
   {
     _id:'IeuXfzM8MYw',
@@ -122,7 +122,7 @@ export const videos = [
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/wLT8ThlLiHQ/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
-    category:"Movie Reivew"
+    category:"Movie Review"
   },
   {
     _id:"38tlLq9rjnI",
