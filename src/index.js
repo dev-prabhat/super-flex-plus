@@ -29,7 +29,7 @@ ReactDOM.render(
                 <App />
               </FilterProvider>
             </HistoryProvider>
-           <PlaylistProvider>
+           </PlaylistProvider>
           </LikeWatchLaterProvider>
         </VideoProvider>
       </AuthProvider>
