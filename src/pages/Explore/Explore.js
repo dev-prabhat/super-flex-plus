@@ -1,11 +1,12 @@
 import React from "react"
-import { useVideo } from "../../context"
-import { Header, Modal, NavBar, PlaylistForm, VideoCard } from "../../components"
+import { useVideo , useFilter} from "../../context"
+import { Header, Modal, NavBar, VideoCard, PlaylistForm , CategoryChip} from "../../components"
 import "../commonPage.css"
 import "./explore.css"
 
 export const Explore = () => {
-    const {videos} = useVideo()
+    const {categories} = useVideo()
+    const {filteredState} = useFilter()
     return(
         <> 
           <main className="page-main">
@@ -15,9 +16,16 @@ export const Explore = () => {
                  <PlaylistForm/>
               </Modal>
                 <section className="page-content padding-xs">
+                    <div className="categorychip-container">
+                        {
+                            categories.map(category => (
+                                <CategoryChip key={category._id} {...category}/>
+                            ))
+                        }
+                    </div>
                     <div className="videos-container">
                         {
-                            videos.map(video => (
+                            filteredState().map(video => (
                                 <VideoCard key={video._id} video={video} isExplore={true}/>
                             ))
                         }
