@@ -61,3 +61,8 @@
     text-decoration: none;
     color: var(--primary-theme-color)
 }
+
+.img__wrapper{
+    width: 60%;
+    margin: 5vh auto;
+}

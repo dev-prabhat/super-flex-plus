@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import {Toaster} from "react-hot-toast"
 import { AuthRoute, PrivateRoute ,Loading} from "./components";
-import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History} from "./pages";
+import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History,SignUp, Page404} from "./pages";
 
 import "./styles.css"
 
@@ -25,9 +25,11 @@ function App() {
 
         <Route element={<AuthRoute/>}>
            <Route path="/login" element={<Login/>}/>
+           <Route path="/signup" element={<SignUp/>}/>
         </Route>
       
         <Route path="/mock" element={<Mock/>}/>
+        <Route path="*" element={<Page404/>}/>
       </Routes>
     </>
   );

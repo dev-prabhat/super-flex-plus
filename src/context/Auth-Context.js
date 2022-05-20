@@ -7,6 +7,7 @@ const AuthContext = createContext()
 const AuthProvider = ({children}) => {
     const {response,isLoading,operation} = useAxios()
     const [loginData, setLoginData] = useState({email:"",password:""})
+    const [signupUser, setSignUpUser] = useState({firstName:"",lastName:"",email:"",password:""})
     const [encodedToken ,setEncodedToken] = useState(null)
 
     useEffect(()=>{
@@ -27,6 +28,18 @@ const AuthProvider = ({children}) => {
         setLoginData({email:"",password:""})
     }
 
+    const signupHandler = (e) => {
+        const {firstName,lastName,email,password} = signupUser
+        e.preventDefault()
+        operation({
+            method:"post",
+            url:"/api/auth/signup",
+            data:{firstName,lastName,email,password}
+        }) 
+        toast.success('SignUp successfully.',{duration:1000})
+        setSignUpUser({firstName:"",lastName:"",email:"",password:""})
+    }
+
     const handleLogout = () => {
         localStorage.removeItem("myToken")
         setEncodedToken(null)
@@ -37,12 +50,21 @@ const AuthProvider = ({children}) => {
         if(response !== undefined){
             localStorage.setItem("myToken",response.encodedToken)
             setEncodedToken(response.encodedToken)
-            setLoginData({email:"",password:""})
         }
     },[response])
 
     return (
-        <AuthContext.Provider value={{encodedToken,isLoading,handleLogin,setLoginData,loginData,handleLogout}}>
+        <AuthContext.Provider value={{
+            encodedToken,
+            isLoading,
+            handleLogin,
+            setLoginData,
+            loginData,
+            handleLogout,
+            setSignUpUser,
+            signupUser,
+            signupHandler
+            }}>
             {children}
         </AuthContext.Provider>
     )
