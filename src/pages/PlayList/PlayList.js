@@ -1,10 +1,12 @@
 import { Header, NavBar, VideoCard } from "../../components"
 import { usePlaylist } from "../../context"
+import { useDoc } from "../../customHooks"
 
 import "../commonPage.css"
 import "./playlist.css"
 
 export const PlayList = () => {
+    useDoc("Playlist")
     const {createdPlaylists,deletePlaylist} = usePlaylist()
     
     return(

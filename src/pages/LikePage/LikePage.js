@@ -1,9 +1,11 @@
 import { Header, NavBar, VideoCard } from "../../components"
 import { useLikeWatchLater } from "../../context"
+import { useDoc } from "../../customHooks"
 import "../commonPage.css"
 import "./likePage.css"
 
 export const LikePage = () => {
+    useDoc("LikePage")
     const {likedList} = useLikeWatchLater()
     return(
         <>

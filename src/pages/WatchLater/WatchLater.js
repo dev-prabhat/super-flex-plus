@@ -1,8 +1,10 @@
 import { Header, NavBar , VideoCard} from "../../components"
 import {useLikeWatchLater} from "../../context" 
+import { useDoc } from "../../customHooks"
 import "../commonPage.css"
 
 export const WatchLater = () => {
+    useDoc("Watchlater")
     const {watchLaterList} = useLikeWatchLater()
     return(
         <>

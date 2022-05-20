@@ -3,8 +3,10 @@ import { useVideo , useFilter} from "../../context"
 import { Header, Modal, NavBar, VideoCard, PlaylistForm , CategoryChip} from "../../components"
 import "../commonPage.css"
 import "./explore.css"
+import { useDoc } from "../../customHooks"
 
 export const Explore = () => {
+    useDoc("Explore")
     const {categories} = useVideo()
     const {filteredState} = useFilter()
     const tempCategories = ["All",...categories]

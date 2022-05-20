@@ -1,6 +1,6 @@
 import React,{createContext,useContext,useState,useEffect} from "react"
 import { useAuth } from "./Auth-Context"
-import  {useAxios} from "../customHooks/useAxios.js"
+import  {useAxios} from "../customHooks"
 
 const PlaylistContext = createContext()
 

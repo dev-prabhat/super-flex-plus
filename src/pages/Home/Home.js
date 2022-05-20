@@ -1,11 +1,13 @@
 import {Link} from "react-router-dom"
 import { useVideo } from "../../context"
 import { Header, NavBar , Category} from "../../components"
+import { useDoc } from "../../customHooks"
 import "../commonPage.css"
 import "./home.css"
 
 
 export const Home = () => {
+    useDoc("Home")
     const {categories} = useVideo()
     
     return(

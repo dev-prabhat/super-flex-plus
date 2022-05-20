@@ -1,7 +1,7 @@
 import React,{createContext,useState,useEffect,useContext} from "react"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "./Auth-Context"
-import {useAxios} from "../customHooks/useAxios"
+import {useAxios} from "../customHooks"
 
 const HistoryContext = createContext()
 

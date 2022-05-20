@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import {Toaster} from "react-hot-toast"
 import { AuthRoute, PrivateRoute ,Loading} from "./components";
 import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History} from "./pages";
 
@@ -8,6 +9,7 @@ function App() {
  
   return (
     <>
+      <Toaster/>
       <Loading/>
       <Routes>
         <Route path="/" element={<Home/>}/>

@@ -1,9 +1,11 @@
 import React from "react"
 import { Header, NavBar, VideoCard } from "../../components"
 import { useHistory } from "../../context"
+import { useDoc } from "../../customHooks"
 import "../commonPage.css"
 
 export const History = () => {
+    useDoc("History")
     const {historyVideos} = useHistory()
     return(
         <> 
