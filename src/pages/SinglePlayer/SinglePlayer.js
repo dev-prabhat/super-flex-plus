@@ -5,12 +5,13 @@ import { useLikeWatchLater } from "../../context";
 import { AiFillHeart,AiOutlineHeart } from "react-icons/ai";
 import { MdWatchLater,MdOutlineWatchLater } from "react-icons/md";
 import { Header, NavBar } from "../../components"
+import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
 import "./singlePlayer.css"
-import { useDoc } from "../../customHooks";
+
 
 export const SinglePlayer = () => {
-    useDoc("SingleVideo")
+    useDocumentTitle("SingleVideo")
     const {videoId} = useParams()
     const {
         handleLike,

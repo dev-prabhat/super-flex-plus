@@ -1,4 +1,4 @@
 import { useAxios } from "./useAxios";
-import { useDoc } from "./useDoc";
+import { useDocumentTitle } from "./useDocumentTitle";
 
-export { useAxios, useDoc}
+export { useAxios, useDocumentTitle}

@@ -2,12 +2,12 @@ import React,{useState} from "react"
 import { BiShow,BiHide } from "react-icons/bi";
 import { Header, NavBar } from "../../components";
 import {useAuth} from "../../context"
-import { useDoc } from "../../customHooks";
+import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
 import "./login.css"
 
 export const Login = () => {
-    useDoc("Login")
+    useDocumentTitle("Login")
     const [showPassword, setShowPassword] = useState(false)
     const {loginData,handleLogin,setLoginData} = useAuth()
     return(

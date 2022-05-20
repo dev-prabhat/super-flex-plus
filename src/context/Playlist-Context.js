@@ -1,4 +1,5 @@
 import React,{createContext,useContext,useState,useEffect} from "react"
+import toast from "react-hot-toast"
 import { useAuth } from "./Auth-Context"
 import  {useAxios} from "../customHooks"
 
@@ -22,6 +23,7 @@ const PlaylistProvider = ({children}) => {
            headers:{"authorization": encodedToken},
            data:{playlist:{title:playlist.title,description:playlist.description}}
        })
+       toast.success("Playlist created Successfully",{duration:1000})
     }
 
     const deletePlaylist = (playlistId) => {
@@ -30,6 +32,7 @@ const PlaylistProvider = ({children}) => {
             url:`/api/user/playlists/${playlistId}`,
             headers:{"authorization": encodedToken},
         })
+        toast.success("Playlist deleted Successfully",{duration:1000})
     }
 
     const addToPlaylist = (playlistId,video) => {
@@ -39,6 +42,7 @@ const PlaylistProvider = ({children}) => {
             headers:{"authorization": encodedToken},
             data:{video}
         })
+        toast.success("Video added to playlist Successfully",{duration:1000})
     }
 
     const deleteFromPlaylist = (playlistId,videoId) => {
@@ -47,6 +51,7 @@ const PlaylistProvider = ({children}) => {
             url:`/api/user/playlists/${playlistId}/${videoId}`,
             headers:{"authorization": encodedToken},
         })
+        toast.success("Video removed from playlist Successfully",{duration:1000})
     }
 
     

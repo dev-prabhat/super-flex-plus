@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom"
 import { Header, NavBar, VideoCard } from "../../components"
 import { usePlaylist } from "../../context"
-import { useDoc } from "../../customHooks"
+import { useDocumentTitle } from "../../customHooks"
 
 import "../commonPage.css"
 import "./playlist.css"
 
 export const PlayList = () => {
-    useDoc("Playlist")
+    useDocumentTitle("Playlist")
     const {createdPlaylists,deletePlaylist} = usePlaylist()
     
     return(
@@ -15,6 +16,14 @@ export const PlayList = () => {
              <Header/>
              <NavBar/>
              <section className="page-content padding-xs">
+                 {
+                     createdPlaylists.length === 0 &&
+                    <div className=" padding-sm ">
+                        <h1 className="head-lg text-center text-gray">No video is here  
+                        <Link to="/explore" className="navigate-link"> Click here </Link> 
+                        to check some videos</h1> 
+                    </div>
+                 }
                <div className="playlist-container">
                    {
                        createdPlaylists && createdPlaylists.map(playlist => (

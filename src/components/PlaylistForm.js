@@ -9,20 +9,26 @@ export const PlaylistForm = () => {
           <form onSubmit={createPlaylist}>
             <div>
                 {
-                    createdPlaylists &&
+                createdPlaylists &&
+                    <ul class="styled-list list-style-none padding-xs">
+                    {  
                     createdPlaylists.map(playlist => (
-                        <label key={playlist._id} className="padding-sm text-sm">
+                    <li key={playlist._id} className="margin-xs">
                         <input 
                             type="checkbox" 
                             className="margin-xs"
+                            id={playlist._id}
                             checked={playlist.videos.some((i) => i._id === selectedVideo._id)}
                             onChange={(e)=> !e.target.checked ? 
                                 deleteFromPlaylist(playlist._id,selectedVideo._id) : 
                                 addToPlaylist(playlist._id,selectedVideo)} 
                             />
+                            <label htmlFor={playlist._id} className="text-sm">
                                 {playlist.title}
                         </label>
-                    ))
+                    </li>
+                    ))}
+                </ul>
                 }
             </div>
 

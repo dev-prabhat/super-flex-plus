@@ -56,3 +56,8 @@
 .active-style{
     background-color: var(--primary-theme-shade-20);
 }
+
+.navigate-link{
+    text-decoration: none;
+    color: var(--primary-theme-color)
+}

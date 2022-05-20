@@ -1,6 +1,6 @@
 import {useEffect} from "react"
 
-export const useDoc = (pagename) => {
+export const useDocumentTitle = (pagename) => {
     useEffect(()=>{
         document.title=`SuperTv+ | ${pagename}`
     })
