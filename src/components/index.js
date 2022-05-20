@@ -7,6 +7,7 @@ import { AuthRoute } from "./AuthRoute"
 import { Modal } from "./Modal/Modal"
 import {PlaylistForm} from "./PlaylistForm"
 import { CategoryChip } from "./CategoryChip/CategoryChip"
+import { Loading } from "./Loading/Loading"
 
-export {Header,NavBar,Category,VideoCard,PrivateRoute,AuthRoute,Modal,CategoryChip,PlaylistForm} 
+export {Header,NavBar,Category,VideoCard,PrivateRoute,AuthRoute,Modal,CategoryChip,PlaylistForm,Loading} 
 

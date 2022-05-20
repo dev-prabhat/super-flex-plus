@@ -1,14 +1,14 @@
 import {useFilter} from "../../context"
 import "./CategoryChip.css"
 
-export const CategoryChip = ({categoryName}) => {
+export const CategoryChip = ({category}) => {
     const {setCategory} = useFilter()
     
     return(
         <div className="chip-container border-radius-xs margin-xs" >
-            <p onClick={()=>setCategory(categoryName)} 
+            <p onClick={()=>setCategory(category)} 
                className="head-sm font-weight-semibold">
-                {categoryName}
+                {category}
             </p>
         </div>
     )

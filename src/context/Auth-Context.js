@@ -3,7 +3,7 @@ import {useAxios} from "../customHooks/useAxios"
 const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
-    const {response,operation} = useAxios()
+    const {response,isLoading,operation} = useAxios()
     const [loginData, setLoginData] = useState({email:"",password:""})
     const [encodedToken ,setEncodedToken] = useState(null)
 
@@ -38,7 +38,7 @@ const AuthProvider = ({children}) => {
     },[response])
 
     return (
-        <AuthContext.Provider value={{encodedToken,handleLogin,setLoginData,loginData,handleLogout}}>
+        <AuthContext.Provider value={{encodedToken,isLoading,handleLogin,setLoginData,loginData,handleLogout}}>
             {children}
         </AuthContext.Provider>
     )

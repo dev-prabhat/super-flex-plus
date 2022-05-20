@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import { AuthRoute, PrivateRoute } from "./components";
+import { AuthRoute, PrivateRoute ,Loading} from "./components";
 import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History} from "./pages";
 
 import "./styles.css"
 
 function App() {
+ 
   return (
     <>
+      <Loading/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/explore" element={<Explore/>}/>

@@ -25,7 +25,7 @@ const VideoProvider = ({children}) => {
 
    useEffect(()=>{
     if(categoriesResponse !== undefined){
-        setCategories(categoriesResponse.categories)
+        setCategories(categoriesResponse.categories.map(category => category.categoryName))
     }
    },[categoriesResponse])
 

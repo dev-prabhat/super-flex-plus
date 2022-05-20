@@ -6,10 +6,10 @@ const PlaylistContext = createContext()
 
 const PlaylistProvider = ({children}) => {
     const {encodedToken} = useAuth()
-    const {response:playlistResponse,operation:playlistOperation} = useAxios()
-    const {response:playlistVideosResponse, operation:playlistVideosOperation} = useAxios()
+    const {response:playlistResponse,isLoading:playlistLoading,operation:playlistOperation} = useAxios()
+    const {response:playlistVideosResponse,isLoading:playlistVideoLoading, operation:playlistVideosOperation} = useAxios()
 
-    const [playlistVideo, setPlaylistVideo] = useState({})
+    const [selectedVideo, setSelectedVideo] = useState({})
     const [createdPlaylists, setCreatedPlaylists] = useState([])
     const [playlist, setPlaylist] = useState({title:"",description:""})
 
@@ -32,12 +32,12 @@ const PlaylistProvider = ({children}) => {
         })
     }
 
-    const addToPlaylist = (playlistId) => {
+    const addToPlaylist = (playlistId,video) => {
         playlistVideosOperation({
             method:"post",
             url:`/api/user/playlists/${playlistId}`,
             headers:{"authorization": encodedToken},
-            data:{video:playlistVideo}
+            data:{video}
         })
     }
 
@@ -66,7 +66,6 @@ const PlaylistProvider = ({children}) => {
             }  
                return playlist
         }))
-        console.log(createdPlaylists)
        }
     },[playlistVideosResponse])
     
@@ -77,10 +76,12 @@ const PlaylistProvider = ({children}) => {
             setPlaylist,
             playlist,
             createdPlaylists,
-            playlistVideo,
+            playlistLoading,
+            selectedVideo,
+            playlistVideoLoading,
             deletePlaylist,
             addToPlaylist,
-            setPlaylistVideo,
+            setSelectedVideo,
             deleteFromPlaylist
             }}>
             {children}

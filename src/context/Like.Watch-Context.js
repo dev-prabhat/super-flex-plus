@@ -8,8 +8,8 @@ const LikeWatchLaterContext = createContext()
 const LikeWatchLaterProvider = ({children}) => {
    const navigate = useNavigate()
    const {encodedToken} = useAuth() 
-   const {response:likeResponse,operation:likeOperation} = useAxios()
-   const {response:watchLaterResponse,operation:watchLaterOperation} = useAxios()
+   const {response:likeResponse,isLoading:likeApiCallLoading,operation:likeOperation} = useAxios()
+   const {response:watchLaterResponse,isLoading:watchLaterApiCallLoading,operation:watchLaterOperation} = useAxios()
    const [likedList, setLikedList] = useState([])
    const [watchLaterList, setWatchLaterList] = useState([])
 
@@ -67,6 +67,8 @@ const LikeWatchLaterProvider = ({children}) => {
            handleLike,
            handleDislike,
            likedList,
+           likeApiCallLoading,
+           watchLaterApiCallLoading,
            addToWatchLater,
            removeFromWatchLater,
            watchLaterList}}>
