@@ -19,11 +19,11 @@ export const SignUp = () => {
                 <section className="page-content">
                     <form className="signUp-form padding-sm border-radius-xs" onSubmit={signupHandler}>
                         <h1 className="head-md text-center margin-sm">Welcome to <span className="highlight">SuperTV+</span></h1>
-                        <label class="form-label" htmlFor="firstName">First Name:</label>
+                        <label className="form-label" htmlFor="firstName">First Name:</label>
                             <input
                             id="firstName"
                             type="text"
-                            class="form-field border-radius-xs padding-xs"
+                            className="form-field border-radius-xs padding-xs"
                             placeholder="jon"
                             onChange={(e) =>setSignUpUser((prev) => ({...prev,firstName:e.target.value}))}
                             value={signupUser.firstName}
@@ -31,11 +31,11 @@ export const SignUp = () => {
                             />
 
 
-                        <label class="form-label" htmlFor="lastName">Last Name: </label>
+                        <label className="form-label" htmlFor="lastName">Last Name: </label>
                             <input
                             type="text"
                             id="lastName"
-                            class="form-field border-radius-xs padding-xs"
+                            className="form-field border-radius-xs padding-xs"
                             placeholder="doe"
                             onChange={(e) =>setSignUpUser((prev) => ({...prev,lastName:e.target.value}))}
                             value={signupUser.lastName}
@@ -81,7 +81,7 @@ export const SignUp = () => {
                         <button className="btn btn-primary text-sm d-100 border-radius-xs">SignUp</button>
                         <p className="text-center text-sm margin-sm font-weight-bold">
                             Already have an Account
-                            <Link to="/login" className="highlight padding-xs">Login</Link>
+                            <Link to="/login" className="highlight padding-xs">Join</Link>
                         </p>
                     </form>
                 </section>

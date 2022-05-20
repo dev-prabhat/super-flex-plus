@@ -8,5 +8,6 @@ import {Login} from "./Login/Login"
 import { SinglePlayer } from "./SinglePlayer/SinglePlayer"
 import { History } from "./History/History"
 import { SignUp } from "./SignUp/SignUp"
+import { Page404 } from "./Page404/Page404"
  
-export {Home,LikePage,PlayList,WatchLater,Mock,Explore,Login,SinglePlayer,History,SignUp}  
+export {Home,LikePage,PlayList,WatchLater,Mock,Explore,Login,SinglePlayer,History,SignUp,Page404}  
