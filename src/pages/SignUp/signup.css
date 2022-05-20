@@ -1,4 +1,4 @@
-.login-form{
+.signUp-form{
     width: 45%;
     margin: 5vh auto;
     background-color: var(--secondary-theme-color);
@@ -6,7 +6,6 @@
 
 .highlight{
     color: var(--primary-theme-color);
-    text-decoration: none;
 }
 
 .other-option-container{
@@ -20,10 +19,5 @@
     position: absolute;
     bottom: 12px;
     right: 5px;
-    cursor: pointer;
-}
-
-.test-credential{
-    color: var(--primary-theme-color);
     cursor: pointer;
 }
