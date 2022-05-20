@@ -1,5 +1,5 @@
 import React,{useContext,createContext,useState,useEffect} from "react"
-import {useAxios} from "../customHooks/useAxios"
+import {useAxios} from "../customHooks"
 
 const VideoContext = createContext()
 
@@ -25,7 +25,7 @@ const VideoProvider = ({children}) => {
 
    useEffect(()=>{
     if(categoriesResponse !== undefined){
-        setCategories(categoriesResponse.categories)
+        setCategories(categoriesResponse.categories.map(category => category.categoryName))
     }
    },[categoriesResponse])
 

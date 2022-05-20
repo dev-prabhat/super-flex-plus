@@ -1,19 +1,15 @@
-import { useState,useEffect } from "react"
 import {Link} from "react-router-dom"
 import { useVideo } from "../../context"
 import { Header, NavBar , Category} from "../../components"
+import { useDocumentTitle } from "../../customHooks"
 import "../commonPage.css"
 import "./home.css"
 
 
 export const Home = () => {
+    useDocumentTitle("Home")
     const {categories} = useVideo()
-    const [categoryToLocal, setCategoryToLocal] = useState(categories)
     
-    useEffect(() => {
-      setCategoryToLocal(categories.filter(category => category.categoryName !== "All"))
-    }, [categories])
-
     return(
         <main className="page-main">
           <Header/>
@@ -32,8 +28,8 @@ export const Home = () => {
                   <h2 className="text-md text-center">Categories</h2>
                     <div className="category-container">
                       {
-                        categoryToLocal.map(category => (
-                              <Category key={category._id} category={category}/>
+                        categories.map(category => (
+                              <Category key={category} category={category}/>
                         ))
                       } 
                     </div>

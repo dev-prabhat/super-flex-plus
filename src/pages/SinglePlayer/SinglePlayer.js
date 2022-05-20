@@ -3,12 +3,15 @@ import ReactPlayer from 'react-player/youtube'
 import { useParams , useLocation} from "react-router-dom"
 import { useLikeWatchLater } from "../../context";
 import { AiFillHeart,AiOutlineHeart } from "react-icons/ai";
-import { MdWatchLater,MdOutlineWatchLater , MdPlaylistAdd} from "react-icons/md";
+import { MdWatchLater,MdOutlineWatchLater } from "react-icons/md";
 import { Header, NavBar } from "../../components"
+import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
 import "./singlePlayer.css"
 
+
 export const SinglePlayer = () => {
+    useDocumentTitle("SingleVideo")
     const {videoId} = useParams()
     const {
         handleLike,
@@ -65,10 +68,6 @@ export const SinglePlayer = () => {
                                         <MdOutlineWatchLater onClick={()=>addToWatchLater(video)} className="watchlater-icon"/> 
                                     }
                                     <p className="text-sm">Watch Later</p>
-                                </div>
-                                <div className="d-flex">
-                                    <MdPlaylistAdd className="playlist-icon"/> 
-                                    <p className="text-sm">Create Playlist</p>
                                 </div>
                             </div>
                         </div>

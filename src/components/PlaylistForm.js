@@ -2,27 +2,32 @@ import React from "react"
 import { usePlaylist } from "../context"
 
 export const PlaylistForm = () => {
-    const {createPlaylist,setPlaylist,playlist,createdPlaylists,addToPlaylist} = usePlaylist()
+    const {createPlaylist,setPlaylist,playlist,createdPlaylists,addToPlaylist,deleteFromPlaylist,selectedVideo} = usePlaylist()
     
     return(
         <> 
           <form onSubmit={createPlaylist}>
             <div>
                 {
-                    createdPlaylists &&
-                <ul className="styled-list list-style-none d-inline_block">
-                {
-                        createdPlaylists.map(playlist => (
-                            <li key={playlist._id} className="margin-xs">
-                                <input type="checkbox" id={playlist._id}/>
-                                <label 
-                                       onClick={()=>addToPlaylist(playlist._id)} 
-                                       className="padding-sm text-sm" htmlFor={playlist._id}>
-                                       {playlist.title}
-                                </label>
-                            </li>
-                        ))
-                }
+                createdPlaylists &&
+                    <ul class="styled-list list-style-none padding-xs">
+                    {  
+                    createdPlaylists.map(playlist => (
+                    <li key={playlist._id} className="margin-xs">
+                        <input 
+                            type="checkbox" 
+                            className="margin-xs"
+                            id={playlist._id}
+                            checked={playlist.videos.some((i) => i._id === selectedVideo._id)}
+                            onChange={(e)=> !e.target.checked ? 
+                                deleteFromPlaylist(playlist._id,selectedVideo._id) : 
+                                addToPlaylist(playlist._id,selectedVideo)} 
+                            />
+                            <label htmlFor={playlist._id} className="text-sm">
+                                {playlist.title}
+                        </label>
+                    </li>
+                    ))}
                 </ul>
                 }
             </div>

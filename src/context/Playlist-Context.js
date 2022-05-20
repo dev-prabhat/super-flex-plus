@@ -1,15 +1,16 @@
 import React,{createContext,useContext,useState,useEffect} from "react"
+import toast from "react-hot-toast"
 import { useAuth } from "./Auth-Context"
-import  {useAxios} from "../customHooks/useAxios.js"
+import  {useAxios} from "../customHooks"
 
 const PlaylistContext = createContext()
 
 const PlaylistProvider = ({children}) => {
     const {encodedToken} = useAuth()
-    const {response:playlistResponse,operation:playlistOperation} = useAxios()
-    const {response:playlistVideosResponse, operation:playlistVideosOperation} = useAxios()
+    const {response:playlistResponse,isLoading:playlistLoading,operation:playlistOperation} = useAxios()
+    const {response:playlistVideosResponse,isLoading:playlistVideoLoading, operation:playlistVideosOperation} = useAxios()
 
-    const [playlistVideo, setPlaylistVideo] = useState({})
+    const [selectedVideo, setSelectedVideo] = useState({})
     const [createdPlaylists, setCreatedPlaylists] = useState([])
     const [playlist, setPlaylist] = useState({title:"",description:""})
 
@@ -22,6 +23,7 @@ const PlaylistProvider = ({children}) => {
            headers:{"authorization": encodedToken},
            data:{playlist:{title:playlist.title,description:playlist.description}}
        })
+       toast.success("Playlist created Successfully",{duration:1000})
     }
 
     const deletePlaylist = (playlistId) => {
@@ -30,15 +32,17 @@ const PlaylistProvider = ({children}) => {
             url:`/api/user/playlists/${playlistId}`,
             headers:{"authorization": encodedToken},
         })
+        toast.success("Playlist deleted Successfully",{duration:1000})
     }
 
-    const addToPlaylist = (playlistId) => {
+    const addToPlaylist = (playlistId,video) => {
         playlistVideosOperation({
             method:"post",
             url:`/api/user/playlists/${playlistId}`,
             headers:{"authorization": encodedToken},
-            data:{video:playlistVideo}
+            data:{video}
         })
+        toast.success("Video added to playlist Successfully",{duration:1000})
     }
 
     const deleteFromPlaylist = (playlistId,videoId) => {
@@ -47,6 +51,7 @@ const PlaylistProvider = ({children}) => {
             url:`/api/user/playlists/${playlistId}/${videoId}`,
             headers:{"authorization": encodedToken},
         })
+        toast.success("Video removed from playlist Successfully",{duration:1000})
     }
 
     
@@ -66,7 +71,6 @@ const PlaylistProvider = ({children}) => {
             }  
                return playlist
         }))
-        console.log(createdPlaylists)
        }
     },[playlistVideosResponse])
     
@@ -77,10 +81,12 @@ const PlaylistProvider = ({children}) => {
             setPlaylist,
             playlist,
             createdPlaylists,
-            playlistVideo,
+            playlistLoading,
+            selectedVideo,
+            playlistVideoLoading,
             deletePlaylist,
             addToPlaylist,
-            setPlaylistVideo,
+            setSelectedVideo,
             deleteFromPlaylist
             }}>
             {children}

@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom";
-import { useModal , useLikeWatchLater , useHistory,usePlaylist} from "../../context";
+import { Link , useNavigate } from "react-router-dom";
+import { useModal , useLikeWatchLater , useHistory,usePlaylist,useAuth} from "../../context";
 import { MdWatchLater, MdPlaylistAdd} from "react-icons/md";
 import { FiTrash2 } from "react-icons/fi";
 import { AiFillHeart } from "react-icons/ai";
@@ -16,15 +16,20 @@ export const VideoCard = ({
   isHistory = false , 
   playlistId = "",
   isPlaylist = false }) => {
+    let navigate = useNavigate()
     const {thumbnail,title,_id} = video
     const {removeFromWatchLater,handleDislike} = useLikeWatchLater()
     const {removeFromHistory,addToHistory} = useHistory()
-    const {setPlaylistVideo,deleteFromPlaylist} = usePlaylist()
+    const {setSelectedVideo,deleteFromPlaylist} = usePlaylist()
+    const {encodedToken} = useAuth()
     const {setIsModal} = useModal()
     
     const clickHandler = (video) => {
-      setIsModal(prev => !prev)
-      setPlaylistVideo(video)
+      if(!encodedToken) navigate("../login",{replace:true})
+      else {
+        setIsModal(prev => !prev)
+        setSelectedVideo(video)
+      }
     }
 
     return(

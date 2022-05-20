@@ -1,6 +1,7 @@
 import React,{createContext,useState,useContext,useEffect} from "react"
 import { useNavigate } from "react-router-dom"
-import { useAxios } from "../customHooks/useAxios"
+import toast from "react-hot-toast"
+import { useAxios } from "../customHooks"
 import { useAuth } from "./Auth-Context"
 
 const LikeWatchLaterContext = createContext()
@@ -8,8 +9,8 @@ const LikeWatchLaterContext = createContext()
 const LikeWatchLaterProvider = ({children}) => {
    const navigate = useNavigate()
    const {encodedToken} = useAuth() 
-   const {response:likeResponse,operation:likeOperation} = useAxios()
-   const {response:watchLaterResponse,operation:watchLaterOperation} = useAxios()
+   const {response:likeResponse,isLoading:likeApiCallLoading,operation:likeOperation} = useAxios()
+   const {response:watchLaterResponse,isLoading:watchLaterApiCallLoading,operation:watchLaterOperation} = useAxios()
    const [likedList, setLikedList] = useState([])
    const [watchLaterList, setWatchLaterList] = useState([])
 
@@ -21,6 +22,7 @@ const LikeWatchLaterProvider = ({children}) => {
            headers:{"authorization": encodedToken},
            data:{video}
        })
+       toast.success("add to liked video",{duration:1000})
    }
 
    const handleDislike = (videoId) => {
@@ -29,6 +31,7 @@ const LikeWatchLaterProvider = ({children}) => {
            url:`/api/user/likes/${videoId}`,
            headers:{"authorization": encodedToken}
        })
+       toast.success("remove from liked video",{duration:1000})
    }
 
    const addToWatchLater = (video) => {
@@ -39,6 +42,7 @@ const LikeWatchLaterProvider = ({children}) => {
            headers:{"authorization": encodedToken},
            data:{video}
        })
+       toast.success("add to watch later video",{duration:1000})
    }
 
    const removeFromWatchLater = (videoId) => {
@@ -47,6 +51,7 @@ const LikeWatchLaterProvider = ({children}) => {
            url:`/api/user/watchlater/${videoId}`,
            headers:{"authorization": encodedToken}
        })
+       toast.success("remove from liked video",{duration:1000})
    }
   
    useEffect(()=>{
@@ -67,6 +72,8 @@ const LikeWatchLaterProvider = ({children}) => {
            handleLike,
            handleDislike,
            likedList,
+           likeApiCallLoading,
+           watchLaterApiCallLoading,
            addToWatchLater,
            removeFromWatchLater,
            watchLaterList}}>

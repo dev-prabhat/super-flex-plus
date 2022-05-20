@@ -3,10 +3,13 @@ import { useVideo , useFilter} from "../../context"
 import { Header, Modal, NavBar, VideoCard, PlaylistForm , CategoryChip} from "../../components"
 import "../commonPage.css"
 import "./explore.css"
+import { useDocumentTitle } from "../../customHooks"
 
 export const Explore = () => {
+    useDocumentTitle("Explore")
     const {categories} = useVideo()
     const {filteredState} = useFilter()
+    const tempCategories = ["All",...categories]
     return(
         <> 
           <main className="page-main">
@@ -18,8 +21,8 @@ export const Explore = () => {
                 <section className="page-content padding-xs">
                     <div className="categorychip-container">
                         {
-                            categories.map(category => (
-                                <CategoryChip key={category._id} {...category}/>
+                            tempCategories.map(category => (
+                                <CategoryChip key={category} category={category}/>
                             ))
                         }
                     </div>
