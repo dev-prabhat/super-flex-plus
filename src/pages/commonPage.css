@@ -66,3 +66,9 @@
     width: 60%;
     margin: 5vh auto;
 }
+
+.logout-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}

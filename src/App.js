@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import {Toaster} from "react-hot-toast"
 import { AuthRoute, PrivateRoute ,Loading} from "./components";
-import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History,SignUp, Page404} from "./pages";
+import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History,SignUp, Page404, ProfilePage} from "./pages";
 
 import "./styles.css"
 
@@ -21,6 +21,7 @@ function App() {
           <Route path="/watchlater" element={<WatchLater/>}/>
           <Route path="/playlist" element={<PlayList/>}/>
           <Route path="/history" element={<History/>}/>
+          <Route path="/profile" element={<ProfilePage/>}/>
         </Route>
 
         <Route element={<AuthRoute/>}>
