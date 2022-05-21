@@ -1,3 +1,18 @@
-## Video Library Backend
+## SuperTv+
 
-This folder contains the Mock Backend created for Video Library App. It contains different API end-points and database configuration for building Video Library; so that you can focus on building Frontend.
+SuperTv+ is a Video Library for Super Hero Nerd built with React, Javascript and CSS for the Frontend and MirageJs , Express for the Backend (Mock Backend)
+
+### OverView 
+
+- Authentication
+- Video Listing
+- Filter Video by Category
+- Playlist Management
+- Like / Dislike functionality
+- Watch Later
+- History
+- Search for a video based on title name
+- Single Video
+- Loading & Toast
+- User Profile 
+
