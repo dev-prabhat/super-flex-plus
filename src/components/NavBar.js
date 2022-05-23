@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { useTheme } from "../context"; 
+import { useTheme} from "../context"
 import { AiOutlineHome, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlinePlaylistPlay,MdOutlineExplore,MdOutlineWatchLater ,MdHistory } from "react-icons/md";
 

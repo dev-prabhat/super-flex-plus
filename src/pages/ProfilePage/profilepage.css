@@ -1,8 +1,10 @@
 .profile__wrapper{
     background-color: var(--danger-light-color);
     width: 70%;
-    margin: 5rem auto;
+    margin: 11rem auto;
+}
 
+.profile{
    display: flex;
    flex-direction: column;
    justify-content: center;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Header, NavBar, VideoCard } from "../../components"
-import { usePlaylist } from "../../context"
+import { usePlaylist , useTheme} from "../../context"
 import { useDocumentTitle } from "../../customHooks"
 
 import "../commonPage.css"
@@ -9,7 +9,7 @@ import "./playlist.css"
 export const PlayList = () => {
     useDocumentTitle("Playlist")
     const {createdPlaylists,deletePlaylist} = usePlaylist()
-
+    const {theme} = useTheme()
     
     return(
         <>
@@ -28,7 +28,7 @@ export const PlayList = () => {
                <div className="playlist-container">
                    {
                        createdPlaylists && createdPlaylists.map(playlist => (
-                        <div key={playlist._id} className="single-playlist-container border-radius-xs margin-xs">
+                        <div key={playlist._id} className={`border-radius-xs margin-xs ${theme === "light" ? "light-color-border" : "dark-color-border"}`}>
                           <div className="playlist-info">
                               <h1 className="head-md text-center">{playlist.title}</h1>
                               <button 

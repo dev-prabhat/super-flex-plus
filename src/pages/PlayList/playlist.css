@@ -3,8 +3,16 @@
     margin: 22% auto;
 }
 
-.single-playlist-container{
+.playlist-container{
+    min-height: 100vh;
+}
+
+.dark-color-border{
     border: 1px solid var(--dark-theme-color);
+}
+
+.light-color-border{ 
+    border: 1px solid var(--secondary-theme-color);
 }
 
 .playlist-info{

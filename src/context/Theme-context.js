@@ -1,13 +1,9 @@
-import React,{createContext,useState,useContext,useEffect} from "react"
+import React,{createContext,useState,useContext} from "react"
 
 const ThemeContext = createContext()
 
 const ThemeProvider = ({children}) => {
     const [theme, setTheme] = useState("light")
-
-    // useEffect(()=>{
-    //   document.getElementById("#id").
-    // },[theme])
     
     return(
         <ThemeContext.Provider value={{theme,setTheme}}>

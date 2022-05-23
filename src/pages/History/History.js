@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Header, NavBar, VideoCard } from "../../components"
-import { useHistory } from "../../context"
+import { useHistory , useTheme} from "../../context"
 import { useDocumentTitle } from "../../customHooks"
 import "../commonPage.css"
 
 export const History = () => {
     useDocumentTitle("History")
     const {historyVideos} = useHistory()
+    const {theme} = useTheme()
     
     return(
         <> 
@@ -23,7 +24,7 @@ export const History = () => {
                     to check some videos</h1> 
                   </div>
               }
-               <div className="like-video-container">
+               <div className={`like-video-container ${theme === "light" ? "dark-theme" : "light-theme"}`}>
                   {
                       historyVideos.map(historyVideo => (
                           <VideoCard key={historyVideo._id} video={historyVideo} isHistory={true}/>

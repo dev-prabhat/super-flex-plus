@@ -27,6 +27,7 @@
     z-index: 10;
 }
 
+
 .header-title{
     font-size: 2rem;
     line-height: 2.5rem;
@@ -95,19 +96,9 @@
 
 .like-video-container,.watchlater-video-container{
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.dark-theme{
-    background-color: var(--dark-theme-color);
-    color: var(--secondary-theme-color);
-}
-
-.light-theme{
-    background-color: var(--secondary-theme-color);
-    color:  var(--dark-theme-color);
+    min-height: 100vh;
 }
 
 .mode-icon{
