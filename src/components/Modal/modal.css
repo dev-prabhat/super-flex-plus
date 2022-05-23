@@ -25,3 +25,15 @@
     top: 10px;
     right: 10px;
 }
+
+@media screen and (max-width:768px) {
+    .modal-content{
+        width: 40%;
+    }
+}
+ 
+@media screen and (max-width:600px) {
+    .modal-content{
+        width: 60%;
+    }
+}

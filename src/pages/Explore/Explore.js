@@ -18,7 +18,7 @@ export const Explore = () => {
               <Modal>
                  <PlaylistForm/>
               </Modal>
-                <section className="page-content padding-xs">
+                <section className="page-content padding-sm">
                     <div className="categorychip-container">
                         {
                             tempCategories.map(category => (

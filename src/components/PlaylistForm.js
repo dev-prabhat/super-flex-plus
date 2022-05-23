@@ -10,7 +10,7 @@ export const PlaylistForm = () => {
             <div>
                 {
                 createdPlaylists &&
-                    <ul class="styled-list list-style-none padding-xs">
+                    <ul className="styled-list list-style-none padding-xs">
                     {  
                     createdPlaylists.map(playlist => (
                     <li key={playlist._id} className="margin-xs">

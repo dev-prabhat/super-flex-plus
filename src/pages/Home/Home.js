@@ -16,11 +16,11 @@ export const Home = () => {
           <NavBar/>
           <section className="page-content padding-xs">
               <div className="hero-section">
-                  <p className="hero-description text-xl">
+                  <p className="hero-description">
                     If your are a Super-Hero fan than you have reach your destination.
                   </p>
                   <Link className="explore-btn margin-sm d-block" to="/explore"> Explore</Link>
-                  <p className="hero-subtitle text-md">
+                  <p className="hero-subtitle">
                     You can explore all the videos which are only related to Super-Hero stuff.
                   </p>
               </div>

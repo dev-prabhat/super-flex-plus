@@ -10,8 +10,9 @@ export const Header = () => {
         <>
          <header className="website-header">
              <div className="header-title-container">
-              <h1 className="head-lg font-weight-bold header-title">Super<span className="header-title-logo">TV+</span></h1>
-              <p className="text-sm header-description">Video Space for SuperHero Nerds</p>
+              <Link to="/" className="header-title">
+                <h1 className="font-weight-bold header-title">Super<span className="header-title-logo">TV+</span></h1> 
+              </Link>
              </div>
              <input 
                 className="padding-xs search-input" 
@@ -23,9 +24,9 @@ export const Header = () => {
                 encodedToken ? (
                     <div className="d-flex"> 
                       <Link to="/profile">
-                        <div class="avatar avatar-xs">
+                        <div className="avatar avatar-xs">
                             <img
-                            class="img-responsive img-round"
+                            className="img-responsive img-round"
                             src={process.env.PUBLIC_URL + "/svg/avatarIcon.svg"}
                             alt="avatar"
                             />
@@ -35,9 +36,9 @@ export const Header = () => {
                     </div>
                 ) : (
                 <Link to="/login">
-                    <div class="avatar avatar-xs">
+                    <div className="avatar avatar-xs">
                         <img
-                        class="img-responsive img-round"
+                        className="img-responsive img-round"
                         src={process.env.PUBLIC_URL + "/svg/avatarIcon.svg"}
                         alt="avatar"
                         />

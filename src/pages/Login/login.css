@@ -1,5 +1,11 @@
+.form-wrapper{
+    width: 100vw;
+    grid-area: form-wrapper;
+    margin: 10vh 0;
+}
+
 .login-form{
-    width: 45%;
+    width: 35%;
     margin: 5vh auto;
     background-color: var(--secondary-theme-color);
 }
@@ -13,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0.5rem;
 }
 
 .show-hide-icon{
@@ -23,7 +30,37 @@
     cursor: pointer;
 }
 
+.remember-me{
+    padding: 0.5rem;
+}
+
 .test-credential{
     color: var(--primary-theme-color);
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .login-form{
+        width: 50%;
+        margin: 5vh auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .login-form{
+        width: 80%;
+    }
+
+    .other-option-container{
+        margin: 5px;
+    }
+    
+    .remember-me{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .test-credential{
+        font-size: 12px;
+    }
 }

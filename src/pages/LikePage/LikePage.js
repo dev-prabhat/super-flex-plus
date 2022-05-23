@@ -3,7 +3,6 @@ import { Header, NavBar, VideoCard } from "../../components"
 import { useLikeWatchLater } from "../../context"
 import { useDocumentTitle } from "../../customHooks"
 import "../commonPage.css"
-import "./likePage.css"
 
 export const LikePage = () => {
     useDocumentTitle("LikePage")

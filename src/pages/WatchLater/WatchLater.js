@@ -21,7 +21,7 @@ export const WatchLater = () => {
                     to check some videos</h1> 
                   </div>
                 }
-                <div className="like-video-container">
+                <div className="watchlater-video-container">
                     {
                       watchLaterList.map(watchLaterVideo => (
                         <VideoCard key={watchLaterVideo._id} video={watchLaterVideo} isWatchLater={true}/>
