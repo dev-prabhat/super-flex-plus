@@ -1,16 +1,17 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Header, NavBar, VideoCard } from "../../components"
-import { useHistory } from "../../context"
+import { useHistory , useTheme} from "../../context"
 import { useDocumentTitle } from "../../customHooks"
 import "../commonPage.css"
 
 export const History = () => {
     useDocumentTitle("History")
     const {historyVideos} = useHistory()
+    const {theme} = useTheme()
     return(
         <> 
-          <main className="page-main">
+          <main className={`page-main  ${theme === "light" ? "dark-theme" : "light-theme"}`}>
             <Header/>
             <NavBar/>
             <section className="page-content padding-xs">

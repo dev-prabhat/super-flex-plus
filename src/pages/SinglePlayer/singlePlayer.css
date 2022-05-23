@@ -14,11 +14,13 @@
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
+    color: var(--dark-theme-color)
 }
 
 .single-page-video-title{
     font-size: 2rem;
     line-height: 2.5rem;
+    color: var(--dark-theme-color)
 }
 
 .creator-avatar-container{
@@ -41,6 +43,10 @@
     font-size: 2rem;
     cursor: pointer;
     margin: 0 1rem;
+}
+
+.like,.watchLater{
+    color: var(--dark-theme-color)
 }
 
 .like-icon{

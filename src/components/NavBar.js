@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom"
-
+import { useTheme } from "../context"; 
 import { AiOutlineHome, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlinePlaylistPlay,MdOutlineExplore,MdOutlineWatchLater ,MdHistory } from "react-icons/md";
 
 
 const activeStyle = ({isActive}) => { return isActive ? "btn-link d-flex head-sm margin-xs active-style" : "btn-link d-flex head-sm margin-xs" }
 export const NavBar = () => {
+    const {theme} = useTheme()
     return(
         <>
-         <nav className="side-navbar">
+         <nav className={`side-navbar ${theme === "light" ? "dark-theme" : "light-theme"}`}>
             <NavLink to="/" className={activeStyle}> 
                <AiOutlineHome className="nav-icons"/> <span className="nav-option"> Home </span> 
             </NavLink>

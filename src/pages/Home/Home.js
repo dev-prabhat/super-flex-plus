@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import { useVideo } from "../../context"
+import { useVideo , useTheme} from "../../context"
 import { Header, NavBar , Category} from "../../components"
 import { useDocumentTitle } from "../../customHooks"
 import "../commonPage.css"
@@ -8,10 +8,11 @@ import "./home.css"
 
 export const Home = () => {
     useDocumentTitle("Home")
+    const {theme} = useTheme()
     const {categories} = useVideo()
     
     return(
-        <main className="page-main">
+        <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`} >
           <Header/>
           <NavBar/>
           <section className="page-content padding-xs">

@@ -1,7 +1,7 @@
 import React from "react"
 import ReactPlayer from 'react-player/youtube'
 import { useParams , useLocation} from "react-router-dom"
-import { useLikeWatchLater } from "../../context";
+import { useLikeWatchLater , useTheme} from "../../context";
 import { AiFillHeart,AiOutlineHeart } from "react-icons/ai";
 import { MdWatchLater,MdOutlineWatchLater } from "react-icons/md";
 import { Header, NavBar } from "../../components"
@@ -23,10 +23,11 @@ export const SinglePlayer = () => {
     const isVideoLiked = likedList.findIndex(video => video._id === videoId) === -1 ? false : true
     const isVideoSaved = watchLaterList.findIndex(video => video._id === videoId) === -1 ? false : true
     const {state} = useLocation()
+    const {theme} = useTheme()
     const video = state
     return(
         <>
-           <main className="page-main">
+           <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`}>
               <Header/>
               <NavBar/>
               <section className="page-content">
@@ -59,7 +60,7 @@ export const SinglePlayer = () => {
                                         <AiFillHeart  onClick={()=>handleDislike(videoId)} className="like-icon" /> :
                                         <AiOutlineHeart  onClick={()=>handleLike(video)} className="like-icon"/>
                                     }
-                                    <p className="text-sm">Like</p>
+                                    <p className="text-sm like">Like</p>
                                 </div>
                                 <div className="d-flex">
                                     {
@@ -67,7 +68,7 @@ export const SinglePlayer = () => {
                                         <MdWatchLater onClick={()=>removeFromWatchLater(videoId)} className="watchlater-icon"/> :
                                         <MdOutlineWatchLater onClick={()=>addToWatchLater(video)} className="watchlater-icon"/> 
                                     }
-                                    <p className="text-sm">Watch Later</p>
+                                    <p className="text-sm watchLater">Watch Later</p>
                                 </div>
                             </div>
                         </div>

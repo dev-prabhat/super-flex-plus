@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Header, NavBar, VideoCard } from "../../components"
-import { usePlaylist } from "../../context"
+import { usePlaylist, useTheme } from "../../context"
 import { useDocumentTitle } from "../../customHooks"
 
 import "../commonPage.css"
@@ -9,10 +9,11 @@ import "./playlist.css"
 export const PlayList = () => {
     useDocumentTitle("Playlist")
     const {createdPlaylists,deletePlaylist} = usePlaylist()
+    const {theme} = useTheme()
     
     return(
         <>
-         <main className="page-main">
+         <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`}>
              <Header/>
              <NavBar/>
              <section className="page-content padding-xs">

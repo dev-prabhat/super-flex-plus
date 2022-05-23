@@ -1,5 +1,5 @@
 import React from "react"
-import { useVideo , useFilter} from "../../context"
+import { useVideo , useFilter , useTheme} from "../../context"
 import { Header, Modal, NavBar, VideoCard, PlaylistForm , CategoryChip} from "../../components"
 import "../commonPage.css"
 import "./explore.css"
@@ -9,10 +9,11 @@ export const Explore = () => {
     useDocumentTitle("Explore")
     const {categories} = useVideo()
     const {filteredState} = useFilter()
+    const {theme} = useTheme()
     const tempCategories = ["All",...categories]
     return(
         <> 
-          <main className="page-main">
+          <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`}>
               <Header/>
               <NavBar/>
               <Modal>

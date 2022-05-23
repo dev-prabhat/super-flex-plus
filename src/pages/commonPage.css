@@ -1,9 +1,3 @@
-:root{
-    --laptop-view:992px;
-    --tablet-view:768px;
-    --mobile-view:600px;
-}
-
 .page-main{
     display: grid;
     grid-template-areas: 
@@ -18,6 +12,7 @@
     "header header header header header header header header header header header header"
     "form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper form-wrapper";
     position: relative;
+    height: 100vh;
 }
 
 .website-header{
@@ -102,6 +97,23 @@
     flex-wrap: wrap;
 }
 
+.dark-theme{
+    background-color: var(--dark-theme-color);
+    color: var(--secondary-theme-color);
+}
+
+.light-theme{
+    background-color: var(--secondary-theme-color);
+    color:  var(--dark-theme-color);
+}
+
+.mode-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-theme-color);
+    margin-right: 1rem;
+}
+
 @media screen and (max-width: 992px) {
     .page-main{
         grid-template-areas: 
@@ -127,6 +139,7 @@
 
     .page-content{
         width: 100vw;
+        height: 100vh;
         margin: 10vh auto;
     }
 }

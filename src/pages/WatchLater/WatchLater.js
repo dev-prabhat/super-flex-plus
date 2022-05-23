@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom"
 import { Header, NavBar , VideoCard} from "../../components"
-import {useLikeWatchLater} from "../../context" 
+import {useLikeWatchLater, useTheme} from "../../context" 
 import { useDocumentTitle } from "../../customHooks"
 import "../commonPage.css"
 
 export const WatchLater = () => {
     useDocumentTitle("Watchlater")
     const {watchLaterList} = useLikeWatchLater()
+    const {theme} = useTheme()
     return(
         <>
-          <main className="page-main">
+          <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`}>
               <Header/>
               <NavBar/>
               <section className="page-content padding-xs">

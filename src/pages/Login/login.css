@@ -1,13 +1,23 @@
 .form-wrapper{
     width: 100vw;
     grid-area: form-wrapper;
-    margin: 10vh 0;
+    margin: 10vh auto;
+    background-color: var(--dark-theme-shade-80);
 }
 
 .login-form{
     width: 35%;
     margin: 5vh auto;
     background-color: var(--secondary-theme-color);
+}
+
+.input-label{
+    color: var(--dark-theme-color);
+    width: 10rem;
+}
+
+.welcome-note{
+    color: var(--dark-theme-color);
 }
 
 .highlight{
@@ -32,6 +42,7 @@
 
 .remember-me{
     padding: 0.5rem;
+    color: var(--dark-theme-color);
 }
 
 .test-credential{

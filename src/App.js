@@ -4,7 +4,6 @@ import { AuthRoute, PrivateRoute ,Loading} from "./components";
 import {Home, Explore , LikePage , WatchLater , PlayList, Login, Mock, SinglePlayer, History,SignUp, Page404, ProfilePage} from "./pages";
 
 import "./styles.css"
-
 function App() {
  
   return (

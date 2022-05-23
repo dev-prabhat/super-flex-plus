@@ -5,6 +5,7 @@ import { LikeWatchLaterProvider,useLikeWatchLater } from "./Like.Watch-Context"
 import { HistoryProvider,useHistory } from "./History-Context"
 import { FilterProvider, useFilter } from "./Filter-Context"  
 import { PlaylistProvider,usePlaylist } from "./Playlist-Context"
+import { ThemeProvider,useTheme } from "./Theme-context"
 
 export {
         VideoProvider,
@@ -20,5 +21,7 @@ export {
         FilterProvider, 
         useFilter,
         PlaylistProvider,
-        usePlaylist
+        usePlaylist,
+        ThemeProvider,
+        useTheme
     }

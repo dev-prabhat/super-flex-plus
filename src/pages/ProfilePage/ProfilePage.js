@@ -1,6 +1,6 @@
 import React from "react"
 import { Header, NavBar } from "../../components";
-import {useAuth} from "../../context"
+import {useAuth, useTheme} from "../../context"
 import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
 import "./profilepage.css"
@@ -8,6 +8,7 @@ import "./profilepage.css"
 export const ProfilePage = () => {
     useDocumentTitle("Profile")
     const {user} = useAuth()
+    const {theme} = useTheme()
     const localUser = JSON.parse(localStorage.getItem("user"))
 
     const currentUser = {
@@ -18,7 +19,7 @@ export const ProfilePage = () => {
   
     return(
         <>
-          <main className="page-main">
+          <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`}>
               <Header/>
               <NavBar/>
                 <section className="page-content">

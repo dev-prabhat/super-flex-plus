@@ -28,6 +28,7 @@
 .playlist-icon{
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--dark-theme-color);
 }
 
 @media screen and (max-width:600px) {

@@ -2,7 +2,7 @@ import React,{useState} from "react"
 import { BiShow,BiHide } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { Header } from "../../components";
-import {useAuth} from "../../context"
+import {useAuth, useTheme} from "../../context"
 import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
 import "./signup.css"
@@ -11,14 +11,15 @@ export const SignUp = () => {
     useDocumentTitle("SignUp")
     const [showPassword, setShowPassword] = useState(false)
     const {signupUser,signupHandler,setSignUpUser} = useAuth()
+    const {theme} = useTheme()
     return(
         <>
-          <main className="signup-page">
+          <main className={`signup-page  ${theme === "light" ? "dark-theme" : "light-theme"}`}>
               <Header/>
                 <section className="form-wrapper">
                     <form className="signUp-form padding-sm border-radius-xs" onSubmit={signupHandler}>
-                        <h1 className="head-md text-center margin-sm">Welcome to <span className="highlight">SuperTV+</span></h1>
-                        <label className="form-label" htmlFor="firstName">First Name:</label>
+                        <h1 className="head-md text-center margin-sm welcome-note">Welcome to <span className="highlight">SuperTV+</span></h1>
+                        <label className="input-label" htmlFor="firstName">First Name:</label>
                             <input
                             id="firstName"
                             type="text"
@@ -30,7 +31,7 @@ export const SignUp = () => {
                             />
 
 
-                        <label className="form-label" htmlFor="lastName">Last Name: </label>
+                        <label className="input-label" htmlFor="lastName">Last Name: </label>
                             <input
                             type="text"
                             id="lastName"
@@ -41,7 +42,7 @@ export const SignUp = () => {
                             required
                             />
                         
-                        <label htmlFor="emailId" className="form-label">Email Address:</label>
+                        <label htmlFor="emailId" className="input-label">Email Address:</label>
                             <input
                             id="emailId"
                             type="email"
@@ -53,7 +54,7 @@ export const SignUp = () => {
                             />
 
                         <div className="position-rel">
-                            <label htmlFor="password" className="form-label">Password: </label>
+                            <label htmlFor="password" className="input-label">Password: </label>
                                 <input
                                 id="password"
                                 type={showPassword ? "text" : "password"}
@@ -74,11 +75,11 @@ export const SignUp = () => {
                         <div className="other-option-container margin-xs ">
                             <div>
                                 <input id="remember-me" type="checkbox" required/>
-                                <label htmlFor="remember-me" className="padding-xs">Remember Me</label>
+                                <label htmlFor="remember-me" className="padding-xs remember-me">Remember Me</label>
                             </div>
                         </div>
                         <button className="btn btn-primary text-sm d-100 border-radius-xs">SignUp</button>
-                        <p className="text-center text-sm margin-sm font-weight-bold">
+                        <p className="text-center text-sm margin-sm font-weight-bold text-gray">
                             Already have an Account
                             <Link to="/login" className="highlight padding-xs">Join</Link>
                         </p>
