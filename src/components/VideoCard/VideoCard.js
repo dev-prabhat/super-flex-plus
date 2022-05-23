@@ -47,7 +47,7 @@ export const VideoCard = ({
                   </div>
             }
               <div className="video-info-container">
-                  <h4 className="video-title text-sm">{title}</h4>
+                  <h4 className="video-title">{title}</h4>
                   {
                     isExplore && <MdPlaylistAdd  onClick={()=>clickHandler(video)} className="playlist-icon"/>
                   }

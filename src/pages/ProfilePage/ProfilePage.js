@@ -23,12 +23,14 @@ export const ProfilePage = () => {
               <NavBar/>
                 <section className="page-content">
                     <div className="profile__wrapper padding-md">
-                        <div class="avatar avatar-text avatar-text-sm margin-xs">
-                            {`${currentUser.firstName.slice(0,1)}${currentUser.lastName.slice(0,1)}`}
+                        <div className="profile">
+                            <div className="avatar avatar-text avatar-text-sm margin-xs">
+                                {`${currentUser.firstName.slice(0,1)}${currentUser.lastName.slice(0,1)}`}
+                            </div>
+                            <h1 className="head-sm margin-xs">FirstName:  {currentUser.firstName}</h1>
+                            <h2 className="head-sm margin-xs">LastName:  {currentUser.lastName}</h2>
+                            <p className="head-sm margin-xs">Email:  {currentUser.email}</p>
                         </div>
-                        <h1 className="head-sm margin-xs">FirstName:  {currentUser.firstName}</h1>
-                        <h2 className="head-sm margin-xs">LastName:  {currentUser.lastName}</h2>
-                        <p className="head-sm margin-xs">Email:  {currentUser.email}</p>
                     </div>
                 </section>
           </main>

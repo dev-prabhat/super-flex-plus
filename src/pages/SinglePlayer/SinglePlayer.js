@@ -1,7 +1,7 @@
 import React from "react"
 import ReactPlayer from 'react-player/youtube'
 import { useParams , useLocation} from "react-router-dom"
-import { useLikeWatchLater } from "../../context";
+import { useLikeWatchLater} from "../../context";
 import { AiFillHeart,AiOutlineHeart } from "react-icons/ai";
 import { MdWatchLater,MdOutlineWatchLater } from "react-icons/md";
 import { Header, NavBar } from "../../components"
@@ -41,17 +41,17 @@ export const SinglePlayer = () => {
                         />
                     <div className="option-container">
                         <div className="creator-avatar-container">
-                            <div className="avatar avatar-sm">
+                            <div className="avatar creator-avatar-icon">
                                 <img
                                 className="img-responsive img-round"
                                 src={video.avatar}
                                 alt="avatar"
                                 />
                             </div>
-                            <h2 className="creator-name head-md">{video.creator}</h2>
+                            <h2 className="creator-name">{video.creator}</h2>
                         </div>
                         <div className="title-container">
-                            <p className="head-lg">{video.title}</p>
+                            <p className="single-page-video-title">{video.title}</p>
                             <div className="action-btn-container">
                                 <div className="d-flex">
                                     {
@@ -59,7 +59,7 @@ export const SinglePlayer = () => {
                                         <AiFillHeart  onClick={()=>handleDislike(videoId)} className="like-icon" /> :
                                         <AiOutlineHeart  onClick={()=>handleLike(video)} className="like-icon"/>
                                     }
-                                    <p className="text-smd">Like</p>
+                                    <p className="text-sm like">Like</p>
                                 </div>
                                 <div className="d-flex">
                                     {
@@ -67,7 +67,7 @@ export const SinglePlayer = () => {
                                         <MdWatchLater onClick={()=>removeFromWatchLater(videoId)} className="watchlater-icon"/> :
                                         <MdOutlineWatchLater onClick={()=>addToWatchLater(video)} className="watchlater-icon"/> 
                                     }
-                                    <p className="text-sm">Watch Later</p>
+                                    <p className="text-sm watchLater">Watch Later</p>
                                 </div>
                             </div>
                         </div>

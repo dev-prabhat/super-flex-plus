@@ -1,7 +1,7 @@
 import React,{useState} from "react"
 import { BiShow,BiHide } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { Header, NavBar } from "../../components";
+import { Header } from "../../components";
 import {useAuth} from "../../context"
 import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
@@ -11,15 +11,16 @@ export const Login = () => {
     useDocumentTitle("Login")
     const [showPassword, setShowPassword] = useState(false)
     const {loginData,handleLogin,setLoginData} = useAuth()
+    
+
     return(
         <>
-          <main className="page-main">
+          <main className="login-page">
               <Header/>
-              <NavBar/>
-                <section className="page-content">
+                <section className="form-wrapper">
                     <form className="login-form padding-sm border-radius-xs" onSubmit={handleLogin}>
-                        <h1 className="head-md text-center margin-sm">Welcome to <span className="highlight">SuperTV+</span></h1>
-                        <label htmlFor="emailId" className="form-label">Email Address:</label>
+                        <h1 className="head-md text-center margin-sm welcome-note">Welcome to <span className="highlight">SuperTV+</span></h1>
+                        <label htmlFor="emailId" className="input-label">Email Address:</label>
                             <input
                             id="emailId"
                             type="email"
@@ -30,7 +31,7 @@ export const Login = () => {
                             required
                             />
                         <div className="position-rel">
-                            <label htmlFor="password" className="form-label">Password: </label>
+                            <label htmlFor="password" className="input-label">Password: </label>
                                 <input
                                 id="password"
                                 type={showPassword ? "text" : "password"}
@@ -48,20 +49,20 @@ export const Login = () => {
                                 )   
                                 }
                         </div>
-                        <div className="other-option-container margin-xs ">
+                        <div className="other-option-container">
                             <div>
                                 <input id="remember-me" type="checkbox" required/>
-                                <label htmlFor="remember-me" className="padding-xs">Remember Me</label>
+                                <label htmlFor="remember-me" className="remember-me">Remember Me</label>
                             </div>
                             <p 
-                            className="test-credential padding-xs"
+                            className="test-credential"
                             onClick={()=>setLoginData({email:"adarshbalika@gmail.com",password:"adarshBalika123"})}
                                 >
                                 Use Test Credentials
                             </p>
                         </div>
                         <button className="btn btn-primary text-sm d-100 border-radius-xs">Login</button>
-                        <p className="text-center text-sm margin-sm font-weight-bold">
+                        <p className="text-center text-sm margin-sm font-weight-bold text-gray">
                             Don't have an account?
                             <Link to="/signup" className="highlight padding-xs">Register Now</Link>
                         </p>

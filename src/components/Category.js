@@ -10,7 +10,7 @@ export const Category = ({category}) => {
           <div className="single-category text-center padding-xs">
               <Link to="/explore" className="category-link" 
                     onClick={()=>setCategory(category)}>
-                <h2 className="head-lg">{category}</h2>
+                <h2 className="single-category-name">{category}</h2>
               </Link>
           </div>
         </>

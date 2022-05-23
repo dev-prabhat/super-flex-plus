@@ -8,8 +8,12 @@ import { AuthProvider,
         LikeWatchLaterProvider,
         PlaylistProvider,
         ModalProvider,
-        VideoProvider 
+        VideoProvider,
+        ThemeProvider,
 } from "./context";
+
+
+
 
 import { makeServer } from "./server";
 
@@ -19,21 +23,23 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-     <ModalProvider>
-      <AuthProvider>
-        <VideoProvider>
-          <LikeWatchLaterProvider>
-            <PlaylistProvider>
-             <HistoryProvider>
-              <FilterProvider>
-                <App />
-              </FilterProvider>
-            </HistoryProvider>
-           </PlaylistProvider>
-          </LikeWatchLaterProvider>
-        </VideoProvider>
-      </AuthProvider>
-     </ModalProvider>
+      <ThemeProvider>
+        <ModalProvider>
+          <AuthProvider>
+            <VideoProvider>
+              <LikeWatchLaterProvider>
+                <PlaylistProvider>
+                  <HistoryProvider>
+                    <FilterProvider>
+                      <App />
+                    </FilterProvider>
+                  </HistoryProvider>
+                </PlaylistProvider>
+              </LikeWatchLaterProvider>
+            </VideoProvider>
+          </AuthProvider>
+        </ModalProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

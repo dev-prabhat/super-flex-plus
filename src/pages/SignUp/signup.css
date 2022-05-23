@@ -1,6 +1,7 @@
 .signUp-form{
-    width: 45%;
-    margin: 5vh auto;
+    width: 35%;
+    margin: 2vh auto;
+    border: 1px solid var(--dark-theme-color);
     background-color: var(--secondary-theme-color);
 }
 
@@ -20,4 +21,26 @@
     bottom: 12px;
     right: 5px;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .signUp-form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .signUp-form{
+        width: 80%;
+    }
+
+    .other-option-container{
+        margin: 5px;
+    }
+    
+    .remember-me{
+        font-size: 12px;
+        padding: 5px;
+    }
+
 }

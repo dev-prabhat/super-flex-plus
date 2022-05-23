@@ -7,7 +7,21 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 100%;
+}
+
 body{
     font-family: 'Overpass', sans-serif;
     background-color: var(--dark-theme-shade-80);
+}
+
+.dark-theme{
+    background-color: var(--dark-theme-color);
+    color: var(--secondary-theme-color);
+}
+
+.light-theme{
+    background-color: var(--secondary-theme-color);
+    color:  var(--dark-theme-color);
 }

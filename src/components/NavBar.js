@@ -1,33 +1,34 @@
 import { NavLink } from "react-router-dom"
-
+import { useTheme} from "../context"
 import { AiOutlineHome, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlinePlaylistPlay,MdOutlineExplore,MdOutlineWatchLater ,MdHistory } from "react-icons/md";
 
 
 const activeStyle = ({isActive}) => { return isActive ? "btn-link d-flex head-sm margin-xs active-style" : "btn-link d-flex head-sm margin-xs" }
 export const NavBar = () => {
+    const {theme} = useTheme()
     return(
         <>
-         <aside className="side-navbar">
+         <nav className={`side-navbar ${theme === "light" ? "dark-theme" : "light-theme"}`}>
             <NavLink to="/" className={activeStyle}> 
-               <AiOutlineHome className="head-md icon-margin"/>Home
+               <AiOutlineHome className="nav-icons"/> <span className="nav-option"> Home </span> 
             </NavLink>
             <NavLink to="/explore" className={activeStyle}>
-                <MdOutlineExplore className="head-md icon-margin"/>Explore
+                <MdOutlineExplore className="nav-icons"/> <span className="nav-option"> Explore </span>
             </NavLink>
             <NavLink to="/playlist" className={activeStyle}>
-                <MdOutlinePlaylistPlay className="head-md icon-margin"/>Playlist
+                <MdOutlinePlaylistPlay className="nav-icons"/> <span className="nav-option"> Playlist </span>
             </NavLink>
             <NavLink to="/like" className={activeStyle}>
-                <AiOutlineHeart className="head-md icon-margin"/>Liked
+                <AiOutlineHeart className="nav-icons"/> <span className="nav-option"> Liked </span>
             </NavLink>
             <NavLink to="/watchlater" className={activeStyle}>
-                <MdOutlineWatchLater className="head-md icon-margin"/>Watch Later
+                <MdOutlineWatchLater className="nav-icons"/> <span className="nav-option"> Watch Later </span>
             </NavLink>
             <NavLink to="/history" className={activeStyle}>
-                <MdHistory className="head-md icon-margin"/>History
+                <MdHistory className="nav-icons"/> <span className="nav-option"> History </span>
             </NavLink>
-         </aside>
+         </nav>
         </>
     )
 }

@@ -10,7 +10,7 @@ export const PlaylistForm = () => {
             <div>
                 {
                 createdPlaylists &&
-                    <ul class="styled-list list-style-none padding-xs">
+                    <ul className="styled-list list-style-none padding-xs">
                     {  
                     createdPlaylists.map(playlist => (
                     <li key={playlist._id} className="margin-xs">
@@ -23,7 +23,7 @@ export const PlaylistForm = () => {
                                 deleteFromPlaylist(playlist._id,selectedVideo._id) : 
                                 addToPlaylist(playlist._id,selectedVideo)} 
                             />
-                            <label htmlFor={playlist._id} className="text-sm">
+                            <label htmlFor={playlist._id} className="text-sm input-label">
                                 {playlist.title}
                         </label>
                     </li>
@@ -33,7 +33,7 @@ export const PlaylistForm = () => {
             </div>
 
             <div>
-                <label className="form-label">Title:</label>
+                <label className="input-label">Title:</label>
                 <input
                 type="text"
                 className="form-field border-radius-xs padding-xs"
@@ -45,7 +45,7 @@ export const PlaylistForm = () => {
             </div>
 
             <div>
-                <label className="form-label">Description: </label>
+                <label className="input-label">Description: </label>
                 <input
                 type="text"
                 className="form-field border-radius-xs padding-xs"

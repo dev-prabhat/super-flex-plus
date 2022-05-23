@@ -7,6 +7,7 @@ import "../commonPage.css"
 
 export const Page404 = () => {
     useDocumentTitle("404")
+   
     return(
         <>
           <main className="page-main">
