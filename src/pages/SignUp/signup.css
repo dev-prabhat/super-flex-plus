@@ -1,6 +1,7 @@
 .signUp-form{
     width: 35%;
     margin: 2vh auto;
+    border: 1px solid var(--dark-theme-color);
     background-color: var(--secondary-theme-color);
 }
 

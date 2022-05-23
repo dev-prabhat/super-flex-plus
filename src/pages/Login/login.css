@@ -1,14 +1,14 @@
 .form-wrapper{
-    width: 100vw;
+    width: 98%;
     grid-area: form-wrapper;
     margin: 10vh auto;
-    background-color: var(--dark-theme-shade-80);
 }
 
 .login-form{
     width: 35%;
-    margin: 5vh auto;
+    margin: 12vh auto;
     background-color: var(--secondary-theme-color);
+    border: 1px solid var(--dark-theme-color);
 }
 
 .input-label{

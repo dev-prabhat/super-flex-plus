@@ -3,10 +3,12 @@
     height: 45vh;
     border-radius: 5px;
     background-color: var(--secondary-theme-color);
+    border: 1px solid var(--dark-theme-color);
 }
 
 .video-card:hover{
     box-shadow: 0 0 5px 0 var(--primary-theme-color);
+    border: none;
 }
 
 .img{

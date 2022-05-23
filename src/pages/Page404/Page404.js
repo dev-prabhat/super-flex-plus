@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import { useTheme } from  "../../context"
 import { Header, NavBar } from "../../components";
 import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
@@ -8,10 +7,10 @@ import "../commonPage.css"
 
 export const Page404 = () => {
     useDocumentTitle("404")
-    const {theme} = useTheme()
+   
     return(
         <>
-          <main className={`page-main ${theme === "light" ? "dark-theme" : "light-theme"}`}>
+          <main className="page-main">
               <Header/>
               <NavBar/>
                 <section className="page-content">

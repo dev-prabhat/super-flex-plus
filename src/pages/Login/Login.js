@@ -2,7 +2,7 @@ import React,{useState} from "react"
 import { BiShow,BiHide } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { Header } from "../../components";
-import {useAuth, useTheme} from "../../context"
+import {useAuth} from "../../context"
 import { useDocumentTitle } from "../../customHooks";
 import "../commonPage.css"
 import "./login.css"
@@ -11,11 +11,11 @@ export const Login = () => {
     useDocumentTitle("Login")
     const [showPassword, setShowPassword] = useState(false)
     const {loginData,handleLogin,setLoginData} = useAuth()
-    const {theme} = useTheme()
+    
 
     return(
         <>
-          <main className={`login-page  ${theme === "light" ? "dark-theme" : "light-theme"}`}>
+          <main className="login-page">
               <Header/>
                 <section className="form-wrapper">
                     <form className="login-form padding-sm border-radius-xs" onSubmit={handleLogin}>

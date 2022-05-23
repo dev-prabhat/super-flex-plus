@@ -1,3 +1,8 @@
+.no-playlist-message{
+    width: 50%;
+    margin: 22% auto;
+}
+
 .single-playlist-container{
     border: 1px solid var(--dark-theme-color);
 }

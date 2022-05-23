@@ -16,7 +16,7 @@ export const WatchLater = () => {
               <section className="page-content padding-xs">
                 {
                   watchLaterList.length === 0 && 
-                  <div className=" padding-sm ">
+                  <div className="padding-sm no-like-video-message">
                     <h1 className="head-lg text-center text-gray">No video is here  
                     <Link to="/explore" className="navigate-link"> Click here </Link> 
                     to check some videos</h1> 

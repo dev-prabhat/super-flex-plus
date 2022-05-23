@@ -39,6 +39,10 @@
     display: flex;
 }
 
+.trash-icon{
+    color: var(--dark-theme-color);
+}
+
 .like-icon,.watchlater-icon,.trash-icon{
     font-size: 2rem;
     cursor: pointer;
