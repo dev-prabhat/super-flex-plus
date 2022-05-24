@@ -15,4 +15,5 @@ SuperTv+ is a Video Library for Super Hero Nerd built with React, Javascript and
 - Single Video
 - Loading & Toast
 - User Profile 
-
+- Dark Mode Implemented
+- Made Site responsive
