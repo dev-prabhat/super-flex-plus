@@ -6,7 +6,7 @@ import "./explore.css"
 import { useDocumentTitle } from "../../customHooks"
 
 export const Explore = () => {
-    useDocumentTitle("Explore")
+    useDocumentTitle("Home")
     const {categories} = useVideo()
     const {filteredState} = useFilter()
     const tempCategories = ["All",...categories]
@@ -18,7 +18,7 @@ export const Explore = () => {
               <Modal>
                  <PlaylistForm/>
               </Modal>
-                <section className="page-content padding-sm">
+                <section className="page-content padding-xs">
                     <div className="categorychip-container">
                         {
                             tempCategories.map(category => (

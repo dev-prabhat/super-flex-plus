@@ -1,6 +1,13 @@
-.videos-container, .categorychip-container{
+.categorychip-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.videos-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
