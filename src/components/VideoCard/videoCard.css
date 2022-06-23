@@ -34,9 +34,16 @@
     color: var(--dark-theme-color);
 }
 
+@media screen and (max-width:992px) {
+    .video-card{
+        height: 15rem;
+    }
+}
+
 @media screen and (max-width:600px) {
     .video-card{
-        width: 80%;
+        width: 65%;
+        height: 14rem;
     }
 
     .video-title{

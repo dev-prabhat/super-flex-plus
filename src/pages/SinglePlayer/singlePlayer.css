@@ -96,6 +96,10 @@
         font-size: 1.5rem;
         margin: 0 1rem;
     }
+
+    .like-btn,.dislike-btn,.save-btn,.remove-btn,.playlist-btn{
+        padding: 0;
+      }
 }
 
 @media screen and (max-width:600px) {
