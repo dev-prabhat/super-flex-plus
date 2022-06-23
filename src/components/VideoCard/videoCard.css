@@ -1,14 +1,12 @@
 .video-card{
     width: 31%;
-    height: 45vh;
     border-radius: 5px;
     background-color: var(--secondary-theme-color);
-    border: 1px solid var(--dark-theme-color);
 }
 
 .video-card:hover{
-    box-shadow: 0 0 5px 0 var(--primary-theme-color);
-    border: none;
+    box-shadow: 0 0 5px 2px var(--primary-theme-color);
+    transition: ease-in 0.2s;
 }
 
 .img{
@@ -17,13 +15,14 @@
 
 .video-info-container{
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 1rem 0 0;
 }
 
 .video-title{
     font-size: 1rem;
-    line-height: 1.5rem;
+    margin: 0 0.5rem;
     color: var(--primary-theme-color);
 }
 

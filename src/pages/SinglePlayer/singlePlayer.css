@@ -1,3 +1,7 @@
+.single-player-container{
+    min-height: 100vh;
+}
+
 .single-player{
     width:95%;
     height: 90vh;
@@ -43,10 +47,16 @@
     color: var(--dark-theme-color);
 }
 
+.like-btn,.dislike-btn,.save-btn,.remove-btn{
+  border: none;
+  background-color: var(--secondary-theme-color);
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
 .like-icon,.watchlater-icon,.trash-icon{
     font-size: 2rem;
-    cursor: pointer;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .like,.watchLater{
