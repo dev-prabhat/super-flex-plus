@@ -36,7 +36,7 @@ export const VideoCard = ({
           <div className="video-card margin-xs padding-xs">
             {
               isExplore ? 
-                <Link to={`${_id}`} state={video} onClick={()=>addToHistory(video)}>
+                <Link to={`/video/${_id}`} state={video} onClick={()=>addToHistory(video)}>
                   <div className="img img-container">
                     <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
                   </div>
@@ -46,29 +46,44 @@ export const VideoCard = ({
                   </div>
             }
               <div className="video-info-container">
-                      <div class="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <img
-                          class="img-responsive img-round"
+                          className="img-responsive img-round"
                           src={avatar}
                           alt="avatar"
                         />
                       </div>
                       <h4 className="video-title text-center">{title}</h4>
-                  {
-                    isExplore && <MdPlaylistAdd  onClick={()=>clickHandler(video)} className="playlist-icon"/>
-                  }
-                  {
-                    isWatchLater && <FiTrash2 onClick={()=>removeFromWatchLater(video._id)} className="trash-icon"/>
-                  }
-                  {
-                    isLike &&  <FiTrash2  onClick={()=>handleDislike(video._id)} className="trash-icon" />  
-                  }
-                  {
-                    isHistory && <FiTrash2 onClick={()=>removeFromHistory(video._id)} className="trash-icon"/>
-                  }
-                  {
-                    isPlaylist && <FiTrash2 onClick={()=>deleteFromPlaylist(playlistId,video._id)} className="trash-icon"/>
-                  }
+                    {
+                      isPlaylist && 
+                      <button className="remove-btn" onClick={()=>deleteFromPlaylist(playlistId,video._id)}>
+                         <FiTrash2 className="trash-icon"/>
+                      </button>
+                    }
+                    {
+                      isExplore &&
+                      <button  onClick={()=>clickHandler(video)} className="playlist-btn">
+                        <MdPlaylistAdd className="playlist-icon"/>
+                      </button>
+                    }
+                    {
+                      isWatchLater &&
+                      <button className="remove-btn" onClick={()=>removeFromWatchLater(video._id)}>
+                        <FiTrash2 className="trash-icon"/>
+                      </button>
+                    }
+                    {
+                      isLike &&
+                      <button className="remove-btn" onClick={()=>handleDislike(video._id)}>
+                        <FiTrash2 className="trash-icon" />
+                      </button>
+                    }
+                    {
+                      isHistory &&
+                      <button className="remove-btn"  onClick={()=>removeFromHistory(video._id)} >
+                        <FiTrash2 className="trash-icon"/>
+                      </button>
+                    }
               </div>
           </div>
         </>

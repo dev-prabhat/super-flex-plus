@@ -17,6 +17,7 @@ const PlaylistProvider = ({children}) => {
 
     const createPlaylist = (e) => {
         e.preventDefault()
+        if(playlist.title.trim() === "" && playlist.description.trim() === "") return alert("Enter all fields...")
        playlistOperation({
            method:"post",
            url:"/api/user/playlists",

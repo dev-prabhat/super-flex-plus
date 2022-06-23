@@ -25,7 +25,6 @@ const AuthProvider = ({children}) => {
             url:"/api/auth/login",
             data:{email:loginData.email,password:loginData.password}
         })
-        toast.success('Loggedin successfully.',{duration:1000})
         setLoginData({email:"",password:""})
     }
 

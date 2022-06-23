@@ -1,7 +1,9 @@
 .video-card{
     width: 31%;
+    height: 16rem;
     border-radius: 5px;
     background-color: var(--secondary-theme-color);
+    padding-bottom: 5px;
 }
 
 .video-card:hover{

@@ -22,7 +22,7 @@ const LikeWatchLaterProvider = ({children}) => {
            headers:{"authorization": encodedToken},
            data:{video}
        })
-       toast.success("add to liked video",{duration:1000})
+       if(encodedToken !== null) toast.success("add to liked video",{duration:1000})
    }
 
    const handleDislike = (videoId) => {
@@ -42,7 +42,7 @@ const LikeWatchLaterProvider = ({children}) => {
            headers:{"authorization": encodedToken},
            data:{video}
        })
-       toast.success("add to watch later video",{duration:1000})
+       if(encodedToken !== null) toast.success("add to watch later video",{duration:1000})
    }
 
    const removeFromWatchLater = (videoId) => {

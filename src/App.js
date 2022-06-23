@@ -13,7 +13,7 @@ function App() {
       <Loading/>
       <Routes>
         <Route path="/" element={<Explore/>}/>
-        <Route path="/:videoId" element={<SinglePlayer/>}/>
+        <Route path="/video/:videoId" element={<SinglePlayer/>}/>
 
         <Route element={<PrivateRoute/>}>
           <Route path="/like" element={<LikePage/>}/>
