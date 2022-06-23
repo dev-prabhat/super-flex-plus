@@ -15,20 +15,20 @@ export const WatchLater = () => {
               <NavBar/>
               <section className="page-content padding-xs">
                 {
-                  watchLaterList.length === 0 && 
-                  <div className="padding-sm no-like-video-message">
-                    <h1 className="head-lg text-center text-gray">No video is here  
-                    <Link to="/explore" className="navigate-link"> Click here </Link> 
-                    to check some videos</h1> 
+                  watchLaterList.length === 0 ? 
+                  <div className="padding-sm no-watchlater-video">
+                      <h1 className="head-lg text-center text-gray">No video is here  
+                      <Link to="/" className="navigate-link"> Click here </Link> 
+                      to check some videos</h1> 
+                  </div> :
+                  <div className="watchlater-video-container">
+                      {
+                        watchLaterList.map(watchLaterVideo => (
+                          <VideoCard key={watchLaterVideo._id} video={watchLaterVideo} isWatchLater={true}/>
+                        ))
+                      }
                   </div>
                 }
-                <div className="watchlater-video-container">
-                    {
-                      watchLaterList.map(watchLaterVideo => (
-                        <VideoCard key={watchLaterVideo._id} video={watchLaterVideo} isWatchLater={true}/>
-                      ))
-                    }
-                </div>
               </section>
           </main>
         </>
