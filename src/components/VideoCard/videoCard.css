@@ -1,6 +1,5 @@
 .video-card{
     width: 31%;
-    height: 16rem;
     border-radius: 5px;
     background-color: var(--secondary-theme-color);
     padding-bottom: 5px;
@@ -9,10 +8,6 @@
 .video-card:hover{
     box-shadow: 0 0 5px 2px var(--primary-theme-color);
     transition: ease-in 0.2s;
-}
-
-.img{
-    height: 30vh;
 }
 
 .video-info-container{
@@ -34,21 +29,27 @@
     color: var(--dark-theme-color);
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:700px) {
     .video-card{
-        height: 15rem;
+        width: 45%;
     }
 }
+
 
 @media screen and (max-width:600px) {
     .video-card{
         width: 65%;
-        height: 14rem;
     }
 
     .video-title{
         font-size: 1rem;
         line-height: 1rem;
     }
+}
 
+@media screen and (max-width:320px) {
+    .video-title{
+        font-size: 10px;
+        line-height: 1rem;
+    }
 }
