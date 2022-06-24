@@ -30,48 +30,52 @@ export const SinglePlayer = () => {
               <Header/>
               <NavBar/>
               <section className="page-content">
-                <div className="single-player border-radius-xs padding-xs">
-                    <ReactPlayer 
-                            url={`https://www.youtube.com/watch?v=${videoId}`} 
-                            playing={true} 
-                            volume={0.5} 
-                            controls={true}
-                            width="100%"
-                            height="80%"
-                        />
-                    <div className="option-container">
-                        <div className="creator-avatar-container">
-                            <div className="avatar creator-avatar-icon">
-                                <img
-                                className="img-responsive img-round"
-                                src={video.avatar}
-                                alt="avatar"
-                                />
+                <div className="single-player-container">
+                    <div className="single-player border-radius-xs padding-xs">
+                        <ReactPlayer 
+                                url={`https://www.youtube.com/watch?v=${videoId}`} 
+                                playing={true} 
+                                volume={0.5} 
+                                controls={true}
+                                width="100%"
+                                height="80%"
+                            />
+                        <div className="option-container">
+                            <div className="creator-avatar-container">
+                                <div className="avatar creator-avatar-icon">
+                                    <img
+                                    className="img-responsive img-round"
+                                    src={video.avatar}
+                                    alt="avatar"
+                                    />
+                                </div>
+                                <h2 className="creator-name">{video.creator}</h2>
                             </div>
-                            <h2 className="creator-name">{video.creator}</h2>
-                        </div>
-                        <div className="title-container">
-                            <p className="single-page-video-title">{video.title}</p>
-                            <div className="action-btn-container">
-                                <div className="d-flex">
+                            <div className="title-container">
+                                <p className="single-page-video-title">{video.title}</p>
+                                <div className="action-btn-container">
                                     {
                                         isVideoLiked ? 
-                                        <AiFillHeart  onClick={()=>handleDislike(videoId)} className="like-icon" /> :
-                                        <AiOutlineHeart  onClick={()=>handleLike(video)} className="like-icon"/>
+                                        <button className="like-btn" onClick={()=>handleDislike(videoId)}>
+                                            <AiFillHeart className="like-icon" />
+                                        </button> :
+                                        <button className="dislike-btn" onClick={()=>handleLike(video)}>
+                                            <AiOutlineHeart className="like-icon"/>
+                                        </button>
                                     }
-                                    <p className="text-sm like">Like</p>
-                                </div>
-                                <div className="d-flex">
                                     {
-                                        isVideoSaved ?  
-                                        <MdWatchLater onClick={()=>removeFromWatchLater(videoId)} className="watchlater-icon"/> :
-                                        <MdOutlineWatchLater onClick={()=>addToWatchLater(video)} className="watchlater-icon"/> 
+                                        isVideoSaved ?
+                                        <button className="save-btn" onClick={()=>removeFromWatchLater(videoId)}>
+                                            <MdWatchLater className="watchlater-icon"/>
+                                        </button> :
+                                        <button className="remove-btn" onClick={()=>addToWatchLater(video)}>
+                                            <MdOutlineWatchLater className="watchlater-icon"/>
+                                        </button>
                                     }
-                                    <p className="text-sm watchLater">Watch Later</p>
                                 </div>
                             </div>
-                        </div>
-                    </div> 
+                        </div> 
+                    </div>
                 </div>
               </section>
            </main>

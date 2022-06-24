@@ -1,12 +1,11 @@
 .form-wrapper{
-    width: 98%;
     grid-area: form-wrapper;
-    margin: 10vh auto;
+    min-height: 100vh;
 }
 
 .login-form{
     width: 35%;
-    margin: 12vh auto;
+    margin: 7rem auto;
     background-color: var(--secondary-theme-color);
     border: 1px solid var(--dark-theme-color);
 }

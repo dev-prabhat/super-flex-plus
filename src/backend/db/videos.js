@@ -118,7 +118,7 @@ export const videos = [
   },
   {
     _id:"wLT8ThlLiHQ",
-    title:"Zack Snyder's Justice League review",
+    title:"Zack Snyder's Justice League Movie Review",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/wLT8ThlLiHQ/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
@@ -126,7 +126,7 @@ export const videos = [
   },
   {
     _id:"38tlLq9rjnI",
-    title:"Avengers: Infinity War reivew ",
+    title:"Avengers: Infinity War Movie Review ",
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/38tlLq9rjnI/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
@@ -134,7 +134,7 @@ export const videos = [
   },
   {
     _id:"PlOO7NZq4sg",
-    title:'Avengers: Endgame review',
+    title:'Avengers: Endgame Movie Review',
     creator:"Desi Nerd",
     thumbnail:"https://i.ytimg.com/vi/PlOO7NZq4sg/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLQjHzYYA8QBduUZ8EKMY8Z_RJ9Nbc8i5GCn-rKc",
@@ -142,7 +142,7 @@ export const videos = [
   },
   {
     _id:"jW9GOOkdNFo",
-    title:"Shang-Chi Movie Review",
+    title:"Shang-Chi Movie Movie Review",
     creator:"Super Super",
     thumbnail:"https://i.ytimg.com/vi/jW9GOOkdNFo/hq720.jpg",
     avatar:"https://yt3.ggpht.com/ytc/AKedOLTjXrQG1HAMq9uDm4NP1ruQIjuz8mZxtYy8ZQGg_Q",

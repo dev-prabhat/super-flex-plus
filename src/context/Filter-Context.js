@@ -6,7 +6,6 @@ const FilterContext = createContext()
 const FilterProvider = ({children}) => {
     const {videos} = useVideo()
     const [category, setCategory] = useState("")
-    const [searchVideo,setSearchVideo] = useState("")
 
     const filteredState = () => {
         let filterVideo = [...videos]
@@ -15,13 +14,11 @@ const FilterProvider = ({children}) => {
             if(category === "All") return filterVideo
             return filterVideo = filterVideo.filter(video => video.category === category)
         }
-
-        filterVideo = filterVideo.filter(video => video.title.toLowerCase().includes(searchVideo.toLowerCase()))
-        return filterVideo
+       return filterVideo
     }
 
     return(
-        <FilterContext.Provider value={{filteredState,searchVideo,setSearchVideo,setCategory}}>
+        <FilterContext.Provider value={{filteredState,setCategory}}>
             {children}
         </FilterContext.Provider>
     )

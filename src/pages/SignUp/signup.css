@@ -1,6 +1,6 @@
 .signUp-form{
     width: 35%;
-    margin: 2vh auto;
+    margin: 5rem auto 0;
     border: 1px solid var(--dark-theme-color);
     background-color: var(--secondary-theme-color);
 }

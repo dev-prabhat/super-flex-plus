@@ -16,20 +16,20 @@ export const LikePage = () => {
               <NavBar/>
               <section className="page-content padding-xs">
                 {
-                  likedList.length === 0 &&
-                  <div className=" padding-sm no-like-video-message">
-                    <h1 className="head-lg text-center text-gray">No video is here  
-                    <Link to="/explore" className="navigate-link"> Click here </Link> 
-                    to check some videos</h1> 
-                  </div>
+                  likedList.length === 0 ? 
+                    <div className=" padding-sm no-like-video">
+                        <h1 className="head-lg text-center text-gray">No video is here  
+                        <Link to="/" className="navigate-link"> Click here </Link> 
+                        to check some videos</h1> 
+                    </div>  :
+                    <div className="like-video-container">
+                        {
+                          likedList.map(likedVideo => (
+                            <VideoCard key={likedVideo._id} video={likedVideo} isLike={true}/>
+                          ))
+                        }
+                    </div>
                 }
-                <div className="like-video-container">
-                    {
-                      likedList.map(likedVideo => (
-                        <VideoCard key={likedVideo._id} video={likedVideo} isLike={true}/>
-                      ))
-                    }
-                </div>
               </section>
           </main>
         </>

@@ -1,4 +1,3 @@
-import {Home} from "./Home/Home"
 import {LikePage} from "./LikePage/LikePage"
 import {PlayList} from "./PlayList/PlayList"
 import {WatchLater} from "./WatchLater/WatchLater"
@@ -11,4 +10,4 @@ import { SignUp } from "./SignUp/SignUp"
 import { Page404 } from "./Page404/Page404"
 import { ProfilePage } from "./ProfilePage/ProfilePage"
  
-export {Home,LikePage,PlayList,WatchLater,Mock,Explore,Login,SinglePlayer,History,SignUp,Page404,ProfilePage}  
+export {LikePage,PlayList,WatchLater,Mock,Explore,Login,SinglePlayer,History,SignUp,Page404,ProfilePage}  

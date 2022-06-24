@@ -1,6 +1,7 @@
 .no-playlist-message{
     width: 50%;
-    margin: 22% auto;
+    margin: auto ;
+    min-height: 90vh;
 }
 
 .playlist-container{
@@ -28,7 +29,7 @@
 .single-playlist{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding: 1rem;
 }
