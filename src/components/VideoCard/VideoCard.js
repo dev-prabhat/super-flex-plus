@@ -37,11 +37,11 @@ export const VideoCard = ({
             {
               isExplore ? 
                 <Link to={`/video/${_id}`} state={video} onClick={()=>addToHistory(video)}>
-                  <div className="img img-container">
+                  <div className="img-container">
                     <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
                   </div>
                 </Link> :
-                  <div className="img img-container">
+                  <div className="img-container">
                     <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
                   </div>
             }

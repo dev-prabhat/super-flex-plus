@@ -10,6 +10,13 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width:700px) {
+    .videos-container{
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width:600px) {
