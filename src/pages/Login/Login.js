@@ -51,12 +51,12 @@ export const Login = () => {
                         </div>
                         <div className="other-option-container">
                             <div>
-                                <input id="remember-me" type="checkbox" required/>
+                                <input id="remember-me" type="checkbox"/>
                                 <label htmlFor="remember-me" className="remember-me">Remember Me</label>
                             </div>
                             <p 
                             className="test-credential"
-                            onClick={()=>setLoginData({email:"adarshbalika@gmail.com",password:"adarshBalika123"})}
+                            onClick={()=>setLoginData({email:"prabhatsingh007@gmail.com",password:"singhprabhat"})}
                                 >
                                 Use Test Credentials
                             </p>

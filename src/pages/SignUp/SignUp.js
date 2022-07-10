@@ -74,7 +74,7 @@ export const SignUp = () => {
                         </div>
                         <div className="other-option-container margin-xs ">
                             <div>
-                                <input id="remember-me" type="checkbox" required/>
+                                <input id="remember-me" type="checkbox"/>
                                 <label htmlFor="remember-me" className="padding-xs remember-me">Remember Me</label>
                             </div>
                         </div>
