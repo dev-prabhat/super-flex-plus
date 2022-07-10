@@ -34,17 +34,11 @@ export const VideoCard = ({
     return(
         <>
           <div className="video-card margin-xs padding-xs">
-            {
-              isExplore ? 
                 <Link to={`/video/${_id}`} state={video} onClick={()=>addToHistory(video)}>
                   <div className="img-container">
                     <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
                   </div>
-                </Link> :
-                  <div className="img-container">
-                    <img className="img-responsive" src={thumbnail} alt="video_thumbnail"/>
-                  </div>
-            }
+                </Link>
               <div className="video-info-container">
                       <div className="avatar avatar-xs">
                         <img
