@@ -158,13 +158,17 @@
 }
 
 @media screen and (max-width:600px) {
+    .website-header{
+        padding: 0.5em;
+    }
+
     .header-title{
         font-size: 1rem;
         line-height: 2rem;
     }   
 
     .search-input{
-        width: 70%;
+        width: 85%;
         margin: 0 5%;
     }
 
@@ -176,5 +180,17 @@
 
     .like-video-container,.watchlater-video-container{
         justify-content: center;
+    }
+
+    .mode-icon{
+        font-size: 1.5rem;
+    }
+
+    .avatar{
+        width: 1.5rem;
+    }
+
+    .logout-icon{
+        font-size: 1.5rem;
     }
 }
