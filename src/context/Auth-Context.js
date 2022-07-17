@@ -8,7 +8,7 @@ const AuthProvider = ({children}) => {
     const {response,isLoading,operation} = useAxios()
     const [loginData, setLoginData] = useState({email:"",password:""})
     const [signupUser, setSignUpUser] = useState({firstName:"",lastName:"",email:"",password:""})
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState(null)
     const [encodedToken ,setEncodedToken] = useState(null)
 
     useEffect(()=>{
@@ -43,15 +43,22 @@ const AuthProvider = ({children}) => {
     const handleLogout = () => {
         localStorage.clear()
         setEncodedToken(null)
-        setUser({})
+        setUser(null)
         toast.success('Logged out .',{duration:1000})
     }
     
     useEffect(()=>{
         if(response !== undefined){
+            console.log(response)
             localStorage.setItem("myToken",response.encodedToken)
-            localStorage.setItem("user",JSON.stringify(response.foundUser))
-            setUser(response.foundUser)
+            if(response.foundUser){
+                localStorage.setItem("user",JSON.stringify(response.foundUser))
+                setUser(response.foundUser)
+            }
+            if(response.createdUser){
+                localStorage.setItem("user",JSON.stringify(response.createdUser))
+                setUser(response.createdUser) 
+            }
             setEncodedToken(response.encodedToken)
         }
     },[response])
